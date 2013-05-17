@@ -84,9 +84,26 @@ namespace RREntities
         public BiteType Bite { get; set; }
         public PeriodontalDiseaseType PeriodontalDisease { get; set; }
         public BadHabitsType BadHabits { get; set; }
+        public OccupationalInsalubrityType OccupationalInsalubrity { get; set; }
 
         public String chooseMethod()
         {
+            int total = 0;
+            
+            if (HygieneIndex <= 1.2)
+                total += 2;
+            else if (HygieneIndex <= 3.0)
+                total += 3;
+            else if (HygieneIndex > 3.0)
+                total += 4;
+
+            if (HygieneIndex <= 1.2)
+                total += 2;
+            else if (HygieneIndex <= 3.0)
+                total += 3;
+            else if (HygieneIndex > 3.0)
+                total += 4;
+
             return "Не знаю";
         }
     }
