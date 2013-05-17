@@ -50,7 +50,7 @@ namespace RREntities
         Deep,
         Other
     }
-
+ 
     public enum PeriodontalDiseaseType
     {
         Healthy,
