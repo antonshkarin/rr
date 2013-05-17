@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RRTooth.Properties
-{
-
-
+namespace RRTooth.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,102 @@ namespace RRTooth.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RRTooth.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Наличие трещин оценивается после высушивания и витального окрашивания 2% раствором метиленового синего и внутриротового подсвечивания.
+        ///Трещины I типа – очень тонкие, заметные после высушивания и витального окрашивания, также внутриротового подсвечивания
+        ///Трещины II типа – определяются сразу после высушивания и внутриротового освещения
+        ///Трещины III типа – глубокие, выявляются при обычном освещении поверхности зуба.
+        /// </summary>
+        internal static string DescFissure {
+            get {
+                return ResourceManager.GetString("DescFissure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Индекс гигиены полости рта оценивали по упрощенному OHI (Green, Vermillion, 1964). Для определения данного индекса обследуют 6 зубов: 1.6, 1.1, 2.6, 3.1 – вестибулярные поверхности и 3.6, 4.6 – язычные поверхности. Оценка зубного налета проводится визуально при окрашивании налета раствором Шиллера-Писарева. Зубной налет покрывающий коронку не более 1/3 – 1 балл, ? поверхности зуба – 2 балла, 2/3 и более – 3 балла, затем числовые значения делятся на общее число обследованных зубов..
+        /// </summary>
+        internal static string DescHygieneIndex {
+            get {
+                return ResourceManager.GetString("DescHygieneIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Определение уровня резистетности эмали по методике Л.А. Аксамит, 1973г., методика заключается в витальном окрашивании протравленного участка эмали. Поверхность исследуемого зуба тщательно очищают от налета 3% раствором перекиси водорода, просушивают струей воздуха, далее на вестибулярную поверхность исследуемого зуба наносят полиэтиленовую липкую ленту в центре которой имеется округлое отверстие в диаметре 2,8 мм, затем в это «окно» наносят деминерализующий раствор на 30 секунд рН – 0,37 (кислотный буфер В. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DescResistanceEname {
+            get {
+                return ResourceManager.GetString("DescResistanceEname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Цвет зуба оценивается 2 методами: колориметрическим (объективным - аппаратурным) и визуальным (субъективным).
+        ///Визуальный метод:
+        ///Если цвет реставрируемого зуба совпадает с цветом соответствующего интактного зуба расположенного на противоположной стороне  - 2 балла
+        ///Если при обследовании поставлен диагноз – периодонтит – 3 балла
+        ///Если зуб депульпирован и эмаль зуба имеет цвет от серого до розового – 4 балла.
+        ///Аппаратурный метод:
+        ///Если цвет реставрируемого зуба совпадает с цветом соответствующего интактного  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DescToothColor {
+            get {
+                return ResourceManager.GetString("DescToothColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Для описания индекса разрушения коронки зуба мы использовали индекс разрушения окклюзионной поверхности зубов (ИРОПЗ) по В.Ю. Миликевичу (1984г.) который был предложен для определения величины поражения зубов. По данной методике всю окклюзионную площадь поверхности зуба принимают за единицу, при разрушении 55% показаны вкладки, а при индексе разрушения больше 80 % – показано изготовление штифтовых конструкций..
+        /// </summary>
+        internal static string DescToothCrownDestruction {
+            get {
+                return ResourceManager.GetString("DescToothCrownDestruction", resourceCulture);
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Tooth {
+            get {
+                object obj = ResourceManager.GetObject("Tooth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
