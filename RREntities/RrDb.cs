@@ -44,6 +44,13 @@ namespace RREntities
         Type3
     }
 
+    public enum ToothCrownDestructionIndexType
+    {
+        Class5_30percents,
+        Class5and6_Class_3and4_60_percents,
+        Class3and4and5_more_than_60_percents
+    }
+
     public enum BiteType
     {
         Open,
@@ -80,7 +87,7 @@ namespace RREntities
         public InstrumentalToothColorType InstrumentalToothColor { get; set; }
         public FissureType PresenceOfFissures { get; set; }
         public int ResistanceEnamelLevel { get; set; }
-        public int ToothCrownDestructionIndex { get; set; } // TODO: определить тип
+        public ToothCrownDestructionIndexType ToothCrownDestructionIndex { get; set; }
         public BiteType Bite { get; set; }
         public PeriodontalDiseaseType PeriodontalDisease { get; set; }
         public BadHabitsType BadHabits { get; set; }
@@ -97,14 +104,76 @@ namespace RREntities
             else if (HygieneIndex > 3.0)
                 total += 4;
 
-            if (HygieneIndex <= 1.2)
+            if (VizualToothColor == VizualToothColorType.Equal)
                 total += 2;
-            else if (HygieneIndex <= 3.0)
+            else if (VizualToothColor == VizualToothColorType.Periodontitis)
                 total += 3;
-            else if (HygieneIndex > 3.0)
+            else if (VizualToothColor == VizualToothColorType.Depulped)
                 total += 4;
 
-            return "Не знаю";
+            if (InstrumentalToothColor == InstrumentalToothColorType.Equal)
+                total += 2;
+            else if (InstrumentalToothColor == InstrumentalToothColorType.NotEqualVizual)
+                total += 3;
+            else if (InstrumentalToothColor == InstrumentalToothColorType.NotEqual)
+                total += 4;
+
+            if (PresenceOfFissures == FissureType.Type1)
+                total += 2;
+            else if (PresenceOfFissures == FissureType.Type2)
+                total += 3;
+            else if (PresenceOfFissures == FissureType.Type3)
+                total += 4;
+
+            if (ResistanceEnamelLevel >= 71)
+                total += 2;
+            else if (ResistanceEnamelLevel >= 30)
+                total += 3;
+            else if (ResistanceEnamelLevel >= 10)
+                total += 4;
+
+            // TODO: ToothCrownDestructionIndex ToothCrownDestructionIndexType
+            if (ToothCrownDestructionIndex == ToothCrownDestructionIndexType.Class5_30percents)
+                total += 2;
+            else if (ToothCrownDestructionIndex == ToothCrownDestructionIndexType.Class5and6_Class_3and4_60_percents)
+                total += 3;
+            else if (ToothCrownDestructionIndex == ToothCrownDestructionIndexType.Class3and4and5_more_than_60_percents)
+                total += 4;
+
+            if (Bite == BiteType.Open)
+                total += 2;
+            else if (Bite == BiteType.Deep)
+                total += 3;
+            else if (Bite == BiteType.Other)
+                total += 4;
+
+            if (PeriodontalDisease == PeriodontalDiseaseType.Healthy)
+                total += 2;
+            else if (PeriodontalDisease == PeriodontalDiseaseType.Low)
+                total += 3;
+            else if (PeriodontalDisease == PeriodontalDiseaseType.Medium)
+                total += 4;
+
+            if (BadHabits == BadHabitsType.No)
+                total += 2;
+            else if (BadHabits == BadHabitsType.Other)
+                total += 3;
+            else if (BadHabits == BadHabitsType.AnyBiting)
+                total += 4;
+
+            if (OccupationalInsalubrity == OccupationalInsalubrityType.No)
+                total += 2;
+            else if (OccupationalInsalubrity == OccupationalInsalubrityType.WithoutPhysicalStresses)
+                total += 3;
+            else if (OccupationalInsalubrity == OccupationalInsalubrityType.Other)
+                total += 4;
+
+            if (total >= 24 && total <= 35)
+                return "Прямой метод реставрации (терапевтический метод)";
+            else if (total >= 36 && total <= 48)
+                return "Непрямой метод реставрации (ортопедический метод)";
+
+            throw new Exception("По кол-ву баллов и один из методов не подходит");
         }
     }
 
