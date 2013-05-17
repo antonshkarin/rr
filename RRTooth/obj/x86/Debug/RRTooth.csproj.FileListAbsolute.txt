@@ -1,0 +1,8 @@
+D:\Projects_2010\RRTooth\RRTooth\bin\Debug\RRTooth.exe
+D:\Projects_2010\RRTooth\RRTooth\bin\Debug\RRTooth.pdb
+D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\RRTooth.Properties.Resources.resources
+D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\RRTooth.exe
+D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\RRTooth.pdb
