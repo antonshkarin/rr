@@ -6,3 +6,16 @@ D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\RRTooth.exe
 D:\Projects_2010\RRTooth\RRTooth\obj\x86\Debug\RRTooth.pdb
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\RRTooth.exe
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\RRTooth.pdb
+G:\RRTooth\RRTooth\RRTooth\bin\Debug\RRTooth.exe
+G:\RRTooth\RRTooth\RRTooth\bin\Debug\RRTooth.pdb
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\RRTooth.Form1.resources
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\RRTooth.Properties.Resources.resources
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\RRTooth.TestForm.resources
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\RRTooth\RRTooth\RRTooth\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\RRTooth\RRTooth\RRTooth\bin\Debug\RRTooth.exe.config
+G:\RRTooth\RRTooth\RRTooth\bin\Debug\RREntities.dll
+G:\RRTooth\RRTooth\RRTooth\bin\Debug\RREntities.pdb
