@@ -20,5 +20,11 @@ namespace RRTooth
             Form wizardForm = new TestForm();
             wizardForm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form wizardForm = new EstimationForm();
+            wizardForm.ShowDialog();
+        }
     }
 }

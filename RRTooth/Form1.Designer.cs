@@ -50,8 +50,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 273);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Первая";
+            this.button1.Text = "Оценка";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -69,7 +70,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(263, 47);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "История";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // Form1
