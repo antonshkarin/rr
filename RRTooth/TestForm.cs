@@ -26,6 +26,8 @@ namespace RRTooth
         private void wizardPage2_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelDescToothColor.Text = Properties.Resources.DescToothColor;
+            comboBoxToothColorVisual.SelectedIndex = 0;
+            comboBoxToothColorInstrumental.SelectedIndex = 0;
         }
 
         private void wizardPageHygieneIndex_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
@@ -48,6 +50,7 @@ namespace RRTooth
         private void wizardPageToothCrownDestruction_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelDescToothCrownDestruction.Text = Properties.Resources.DescToothCrownDestruction;
+            comboBoxToothCrownDestruction.SelectedIndex = 0;
         }
 
         private void wizardPageHygieneIndex_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
@@ -98,13 +101,13 @@ namespace RRTooth
         {
             switch (comboBoxFissure.SelectedIndex)
             {
-                case 1:
+                case 0:
                     diagnosticCard.PresenceOfFissures = FissureType.Type1;
                     break;
-                case 2:
+                case 1:
                     diagnosticCard.PresenceOfFissures = FissureType.Type2;
                     break;
-                case 3:
+                case 2:
                     diagnosticCard.PresenceOfFissures = FissureType.Type3;
                     break;
             }
@@ -114,14 +117,14 @@ namespace RRTooth
         {
             switch (comboBoxResistanceEname.SelectedIndex)
             {
+                case 0:
+                    diagnosticCard.ResistanceEnamelLevel = 75;
+                    break;
                 case 1:
-                    diagnosticCard.ResistanceEnamelLevel = 2;
+                    diagnosticCard.ResistanceEnamelLevel = 35;
                     break;
                 case 2:
-                    diagnosticCard.ResistanceEnamelLevel = 3;
-                    break;
-                case 3:
-                    diagnosticCard.ResistanceEnamelLevel = 4;
+                    diagnosticCard.ResistanceEnamelLevel = 15;
                     break;
             }
         }
@@ -130,14 +133,14 @@ namespace RRTooth
         {
             switch (comboBoxToothCrownDestruction.SelectedIndex)
             {
+                case 0:
+                    diagnosticCard.ToothCrownDestructionIndex = ToothCrownDestructionIndexType.Class5_30percents;
+                    break;
                 case 1:
-                    diagnosticCard.ToothCrownDestructionIndex = 2;
+                    diagnosticCard.ToothCrownDestructionIndex = ToothCrownDestructionIndexType.Class5and6_Class_3and4_60_percents;
                     break;
                 case 2:
-                    diagnosticCard.ToothCrownDestructionIndex = 3;
-                    break;
-                case 3:
-                    diagnosticCard.ToothCrownDestructionIndex = 4;
+                    diagnosticCard.ToothCrownDestructionIndex = ToothCrownDestructionIndexType.Class3and4and5_more_than_60_percents;
                     break;
             }
         }
@@ -146,13 +149,13 @@ namespace RRTooth
         {
             switch (comboBoxBite.SelectedIndex)
             {
-                case 1:
+                case 0:
                     diagnosticCard.Bite = BiteType.Open;
                     break;
-                case 2:
+                case 1:
                     diagnosticCard.Bite = BiteType.Deep;
                     break;
-                case 3:
+                case 2:
                     diagnosticCard.Bite = BiteType.Other;
                     break;
             }
@@ -162,13 +165,13 @@ namespace RRTooth
         {
             switch (comboBoxPeriodontalDisease.SelectedIndex)
             {
-                case 1:
+                case 0:
                     diagnosticCard.PeriodontalDisease = PeriodontalDiseaseType.Healthy;
                     break;
-                case 2:
+                case 1:
                     diagnosticCard.PeriodontalDisease = PeriodontalDiseaseType.Low;
                     break;
-                case 3:
+                case 2:
                     diagnosticCard.PeriodontalDisease = PeriodontalDiseaseType.Medium;
                     break;
             }
@@ -178,13 +181,13 @@ namespace RRTooth
         {
             switch (comboBoxBadHabits.SelectedIndex)
             {
-                case 1:
+                case 0:
                     diagnosticCard.BadHabits = BadHabitsType.No;
                     break;
-                case 2:
+                case 1:
                     diagnosticCard.BadHabits = BadHabitsType.AnyBiting;
                     break;
-                case 3:
+                case 2:
                     diagnosticCard.BadHabits = BadHabitsType.Other;
                     break;
             }
@@ -194,15 +197,69 @@ namespace RRTooth
         {
             switch (comboBoxProfessionalHarmfulness.SelectedIndex)
             {
-                /*case 1:
-                    //diagnosticCard.
+                case 0:
+                    diagnosticCard.OccupationalInsalubrity = OccupationalInsalubrityType.No;
+                    break;
+                case 1:
+                    diagnosticCard.OccupationalInsalubrity = OccupationalInsalubrityType.WithoutPhysicalStresses;
                     break;
                 case 2:
-                    diagnosticCard.BadHabits = BadHabitsType.AnyBiting;
+                    diagnosticCard.OccupationalInsalubrity = OccupationalInsalubrityType.Other;
                     break;
-                case 3:
-                    diagnosticCard.BadHabits = BadHabitsType.Other;
-                    break;*/
+            }
+        }
+
+        private void wizardPage10_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
+        {
+            labelMethod.Text = diagnosticCard.chooseMethod();
+        }
+
+        private void wizardPage10_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
+        {
+
+        }
+
+        private void wizardPageProfessionalHarmfulness_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
+        {
+            comboBoxProfessionalHarmfulness.SelectedIndex = 0;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelToothColor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wizardPageToothColor_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
+        {
+            switch (comboBoxToothColorVisual.SelectedIndex)
+            {
+                case 0:
+                    diagnosticCard.VizualToothColor = VizualToothColorType.Equal;
+                    break;
+                case 1:
+                    diagnosticCard.VizualToothColor = VizualToothColorType.Periodontitis;
+                    break;
+                case 2:
+                    diagnosticCard.VizualToothColor = VizualToothColorType.Depulped;
+                    break;
+            }
+
+            switch (comboBoxToothColorInstrumental.SelectedIndex)
+            {
+                case 0:
+                    diagnosticCard.InstrumentalToothColor = InstrumentalToothColorType.Equal;
+                    break;
+                case 1:
+                    diagnosticCard.InstrumentalToothColor = InstrumentalToothColorType.NotEqualVizual;
+                    break;
+                case 2:
+                    diagnosticCard.InstrumentalToothColor = InstrumentalToothColorType.NotEqual;
+                    break;
             }
         }
     }
