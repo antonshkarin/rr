@@ -10,3 +10,9 @@ D:\Sources\gitSource\rr\RREntities\bin\Debug\RREntities.pdb
 D:\Sources\gitSource\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
 D:\Sources\gitSource\rr\RREntities\obj\Debug\RREntities.dll
 D:\Sources\gitSource\rr\RREntities\obj\Debug\RREntities.pdb
+G:\20.05\rr\RREntities\bin\Debug\RREntities.dll.config
+G:\20.05\rr\RREntities\bin\Debug\RREntities.dll
+G:\20.05\rr\RREntities\bin\Debug\RREntities.pdb
+G:\20.05\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
+G:\20.05\rr\RREntities\obj\Debug\RREntities.dll
+G:\20.05\rr\RREntities\obj\Debug\RREntities.pdb

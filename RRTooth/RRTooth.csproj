@@ -39,6 +39,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\AeroWizard.dll</HintPath>
     </Reference>
+    <Reference Include="Controls, Version=1.0.0.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -105,6 +109,18 @@
       <Project>{6BD64B45-E0BB-4FC8-8B11-CFA4CD06980C}</Project>
       <Name>RREntities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr_diagnostics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr_evaluation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr_history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

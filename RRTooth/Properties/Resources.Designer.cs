@@ -114,6 +114,34 @@ namespace RRTooth.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap rr_diagnostics {
+            get {
+                object obj = ResourceManager.GetObject("rr_diagnostics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rr_evaluation {
+            get {
+                object obj = ResourceManager.GetObject("rr_evaluation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rr_history {
+            get {
+                object obj = ResourceManager.GetObject("rr_history", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rr_icon {
+            get {
+                object obj = ResourceManager.GetObject("rr_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Tooth {
             get {
                 object obj = ResourceManager.GetObject("Tooth", resourceCulture);
