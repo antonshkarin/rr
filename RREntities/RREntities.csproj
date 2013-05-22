@@ -59,6 +59,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RrHistory.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Properties\DataSources\RrEntities.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

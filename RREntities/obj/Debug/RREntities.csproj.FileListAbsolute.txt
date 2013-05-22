@@ -16,3 +16,14 @@ G:\20.05\rr\RREntities\bin\Debug\RREntities.pdb
 G:\20.05\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
 G:\20.05\rr\RREntities\obj\Debug\RREntities.dll
 G:\20.05\rr\RREntities\obj\Debug\RREntities.pdb
+D:\Projects\rr\RREntities\bin\Debug\RREntities.dll.config
+D:\Projects\rr\RREntities\bin\Debug\RREntities.dll
+D:\Projects\rr\RREntities\bin\Debug\RREntities.pdb
+D:\Projects\rr\RREntities\obj\Debug\RREntities.dll
+D:\Projects\rr\RREntities\obj\Debug\RREntities.pdb
+D:\Projects_2010\RRTooth_git\rr\RREntities\bin\Debug\RREntities.dll.config
+D:\Projects_2010\RRTooth_git\rr\RREntities\bin\Debug\RREntities.dll
+D:\Projects_2010\RRTooth_git\rr\RREntities\bin\Debug\RREntities.pdb
+D:\Projects_2010\RRTooth_git\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects_2010\RRTooth_git\rr\RREntities\obj\Debug\RREntities.dll
+D:\Projects_2010\RRTooth_git\rr\RREntities\obj\Debug\RREntities.pdb

@@ -67,5 +67,10 @@ namespace RRTooth
         {
 
         }
+
+        private void closeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
