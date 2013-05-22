@@ -61,6 +61,8 @@ namespace RRTooth
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            Form historyForm = new HistoryForm();
+            historyForm.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
