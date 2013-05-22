@@ -13,7 +13,10 @@ namespace RREntities
     {
         public static String GetConnectionString()
         {
-            return ConfigurationManager.ConnectionStrings["rr_dbEntities"].ConnectionString;
+            String connStr = String.Format(
+                "metadata=res://*/RrHistory.csdl|res://*/RrHistory.ssdl|res://*/RrHistory.msl;provider=System.Data.SQLite;provider connection string='{0}'",
+                ConfigurationManager.ConnectionStrings["rr_dbEntities0"].ConnectionString);
+            return connStr;
         }
 
         public static RrEntities Create()
@@ -132,7 +135,6 @@ namespace RREntities
             else if (ResistanceEnamelLevel >= 10)
                 total += 4;
 
-            // TODO: ToothCrownDestructionIndex ToothCrownDestructionIndexType
             if (ToothCrownDestructionIndex == ToothCrownDestructionIndexType.Class5_30percents)
                 total += 2;
             else if (ToothCrownDestructionIndex == ToothCrownDestructionIndexType.Class5and6_Class_3and4_60_percents)
@@ -177,15 +179,27 @@ namespace RREntities
         }
     }
 
+    [Serializable]
+    public class EstimationCard
+    {
+        int СоответствиеФормыЗубаОвалуЛица;
+
+    }
 
     public partial class rr_history
     {
-        public static rr_history Create<T>(String firstName, String secondName, String lastName, DateTime date, Int64 type, T info)
+        public enum RowType
+        {
+            Diagnostics,
+            Estimation
+        }
+
+        public static rr_history Create<T>(String firstName, String secondName, String lastName, DateTime date, RowType type, T info)
         {
             JavaScriptSerializer serializer = new JavaScriptSerializer(); 
             String serInfo = serializer.Serialize(info);
 
-            rr_history row = new rr_history { first_name = firstName, second_name = secondName, last_name = lastName, date = date, type = type, info = serInfo };
+            rr_history row = new rr_history { first_name = firstName, second_name = secondName, last_name = lastName, date = date, type = (Int64)type, info = serInfo };
 
             return row;
         }
@@ -198,7 +212,7 @@ namespace RREntities
 
         public void Add(rr_history entry)
         {
-            dbContext.rr_history.Attach(entry);
+            dbContext.rr_history.AddObject(entry);
             dbContext.SaveChanges();
         }
 

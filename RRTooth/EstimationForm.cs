@@ -30,5 +30,10 @@ namespace RRTooth
         {
             Close();
         }
+
+        private void radioButton84_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

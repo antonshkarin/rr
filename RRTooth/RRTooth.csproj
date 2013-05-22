@@ -39,12 +39,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\AeroWizard.dll</HintPath>
     </Reference>
-    <Reference Include="Controls, Version=1.0.0.2, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Controls.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -105,12 +102,6 @@
     <None Include="Resources\Tooth.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RREntities\RREntities.csproj">
-      <Project>{6BD64B45-E0BB-4FC8-8B11-CFA4CD06980C}</Project>
-      <Name>RREntities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\rr_diagnostics.png" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rr_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RREntities\RREntities.csproj">
+      <Project>{6BD64B45-E0BB-4FC8-8B11-CFA4CD06980C}</Project>
+      <Name>RREntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

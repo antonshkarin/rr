@@ -224,11 +224,6 @@ namespace RRTooth
             comboBoxProfessionalHarmfulness.SelectedIndex = 0;
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void labelToothColor_Click(object sender, EventArgs e)
         {
 
@@ -260,6 +255,29 @@ namespace RRTooth
                 case 2:
                     diagnosticCard.InstrumentalToothColor = InstrumentalToothColorType.NotEqual;
                     break;
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (this.textBoxLastName.Text.Length == 0)
+                MessageBox.Show("Не заполнены обязательные поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                try
+                {
+                    var row = rr_history.Create<DiagnosticCard>(this.textBoxFirstName.Text, this.textBoxSecondName.Text, this.textBoxLastName.Text,
+                        DateTime.Now, rr_history.RowType.Diagnostics, diagnosticCard);
+                    RrDb db = new RrDb();
+                    db.Add(row);
+
+                    MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.wizardControl1.EndInit();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
