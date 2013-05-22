@@ -34,16 +34,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-=======
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.closeLinkLabel = new System.Windows.Forms.LinkLabel();
->>>>>>> 8d7bed25d3f9a1445222af00d5bcce1923c100b1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -104,7 +101,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "(The Registar tooth restoration)";
             // 
-<<<<<<< HEAD
             // label3
             // 
             this.label3.AutoSize = true;
@@ -131,7 +127,6 @@
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Выбор метода";
-=======
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -181,7 +176,7 @@
             this.closeLinkLabel.Text = "Закрыть";
             this.closeLinkLabel.VisitedLinkColor = System.Drawing.Color.Maroon;
             this.closeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.closeLinkLabel_LinkClicked);
->>>>>>> 8d7bed25d3f9a1445222af00d5bcce1923c100b1
+
             // 
             // Form1
             // 
@@ -190,18 +185,14 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = global::RRTooth.Properties.Resources.Tooth;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(388, 396);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-=======
-            this.ClientSize = new System.Drawing.Size(388, 392);
+
             this.Controls.Add(this.closeLinkLabel);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
->>>>>>> 8d7bed25d3f9a1445222af00d5bcce1923c100b1
+
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -227,16 +218,13 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-<<<<<<< HEAD
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-=======
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel closeLinkLabel;
->>>>>>> 8d7bed25d3f9a1445222af00d5bcce1923c100b1
     }
 }
 
