@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="AeroWizard, Version=1.2.5.23666, Culture=neutral, PublicKeyToken=915e74f5d64b8f37, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\AeroWizard.dll</HintPath>
+      <HintPath>..\..\rr_\RRTooth\bin\Debug\AeroWizard.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
