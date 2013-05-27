@@ -272,7 +272,7 @@ namespace RRTooth
                     db.Add(row);
 
                     MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.wizardControl1.EndInit();
+                    this.Close();
                 }
                 catch(Exception ex)
                 {
