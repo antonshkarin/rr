@@ -37,7 +37,6 @@ namespace RRTooth
                     historyRow.date.ToShortDateString() });
                 dataGridView1.Rows.Add(r);
             }
-
         }
     }
 }

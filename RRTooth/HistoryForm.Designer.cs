@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.labelSecondName = new System.Windows.Forms.Label();
             this.labelLast1Name = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
@@ -176,7 +177,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
