@@ -15,7 +15,7 @@ namespace RREntities
         {
             String connStr = String.Format(
                 "metadata=res://*/RrHistory.csdl|res://*/RrHistory.ssdl|res://*/RrHistory.msl;provider=System.Data.SQLite;provider connection string='{0}'",
-                ConfigurationManager.ConnectionStrings["rr_dbEntities1"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["rr_dbEntities"].ConnectionString);
             return connStr;
         }
 
@@ -170,9 +170,9 @@ namespace RREntities
             else if (OccupationalInsalubrity == OccupationalInsalubrityType.Other)
                 total += 4;
 
-            if (total >= 24 && total <= 35)
+            if (/*total >= 24 && */total <= 35)
                 return "Прямой метод реставрации (терапевтический метод)";
-            else if (total >= 36 && total <= 48)
+            else if (total >= 36/* && total <= 48*/)
                 return "Непрямой метод реставрации (ортопедический метод)";
 
             throw new Exception("По кол-ву баллов и один из методов не подходит");
@@ -183,7 +183,25 @@ namespace RREntities
     public class EstimationCard
     {
         int СоответствиеФормыЗубаОвалуЛица;
-
+        int ПропорцииСоблюдены;
+        int РежущийКрайФестончатость;
+        int КраевоеПрилегание;
+        int КонтактныйПункт;
+        int СоответствиеРеставрацииСрединнойЛинии;
+        int СоответствиеЦвета;
+        int ПлавностьПереходаЦветов;
+        int ИзменениеЦветаНаГраницеРеставрацииСЗубом;
+        int РежущийКрай;
+        int КонтактныеПоверхности;
+        int ОтсутствиеПрозрачности;
+        int ГладкостьПоверхности;
+        int БлескПоверхностиСухой;
+        int БлескПоверхностиВлажный;
+        int ОкклюзионныеВзаимоотношения;
+        int ПослеоперационнаяЧувствительность;
+        int Дикция;
+        int СостояниеПародонтаПослеРеставрации;
+        int ОценкаРеставрацииПациентом;
     }
 
     public partial class rr_history
@@ -216,10 +234,10 @@ namespace RREntities
             dbContext.SaveChanges();
         }
 
-        public T Find<T>(String lastName)
+        public List<rr_history> Find(String lastName)
         {
             var entries = dbContext.rr_history.Where(x => (x.last_name == lastName));
-            return (T)Convert.ChangeType(entries, typeof(T));
+            return entries.ToList();
         }
     }
 }

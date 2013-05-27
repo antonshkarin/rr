@@ -50,7 +50,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::RRTooth.Properties.Resources.rr_diagnostics;
-            this.pictureBox1.Location = new System.Drawing.Point(311, 313);
+            this.pictureBox1.Location = new System.Drawing.Point(311, 316);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 65);
             this.pictureBox1.TabIndex = 4;
@@ -61,7 +61,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::RRTooth.Properties.Resources.rr_evaluation;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 313);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 316);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 65);
             this.pictureBox2.TabIndex = 5;
@@ -72,7 +72,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::RRTooth.Properties.Resources.rr_history;
-            this.pictureBox3.Location = new System.Drawing.Point(160, 313);
+            this.pictureBox3.Location = new System.Drawing.Point(160, 316);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 65);
             this.pictureBox3.TabIndex = 6;
@@ -127,12 +127,13 @@
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Выбор метода";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabel1.Location = new System.Drawing.Point(23, 379);
+            this.linkLabel1.Location = new System.Drawing.Point(23, 382);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(45, 13);
             this.linkLabel1.TabIndex = 9;
@@ -144,7 +145,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabel2.Location = new System.Drawing.Point(166, 379);
+            this.linkLabel2.Location = new System.Drawing.Point(166, 382);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(50, 13);
             this.linkLabel2.TabIndex = 10;
@@ -156,7 +157,7 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabel3.Location = new System.Drawing.Point(308, 379);
+            this.linkLabel3.Location = new System.Drawing.Point(308, 382);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(74, 13);
             this.linkLabel3.TabIndex = 11;
@@ -176,7 +177,6 @@
             this.closeLinkLabel.Text = "Закрыть";
             this.closeLinkLabel.VisitedLinkColor = System.Drawing.Color.Maroon;
             this.closeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.closeLinkLabel_LinkClicked);
-
             // 
             // Form1
             // 
@@ -185,14 +185,11 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = global::RRTooth.Properties.Resources.Tooth;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
             this.ClientSize = new System.Drawing.Size(388, 396);
-
             this.Controls.Add(this.closeLinkLabel);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
-
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);

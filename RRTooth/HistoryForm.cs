@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RREntities;
 
 namespace RRTooth
 {
@@ -18,38 +19,25 @@ namespace RRTooth
 
         private void HistoryForm_Load(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RrDb db = new RrDb();
+            var finded = db.Find(textBoxLastName.Text);
+            foreach (var historyRow in finded)
             {
                 DataGridViewRow r = new DataGridViewRow();
-                DataGridViewTextBoxCell a = new DataGridViewTextBoxCell();
-                a.Value = "Иван";
-                r.Cells.Add(a);
-                DataGridViewTextBoxCell b = new DataGridViewTextBoxCell();
-                b.Value = "Иванов";
-                r.Cells.Add(b);
-                DataGridViewTextBoxCell c = new DataGridViewTextBoxCell();
-                c.Value = "Иванович";
-                r.Cells.Add(c);
-                DataGridViewLinkCell d = new DataGridViewLinkCell();
-                d.Value = "Диагностика";
-                r.Cells.Add(d);
+
+                r.CreateCells(dataGridView1, new Object[] { 
+                    historyRow.first_name, 
+                    historyRow.second_name, 
+                    historyRow.last_name, 
+                    historyRow.type == (Int64)rr_history.RowType.Diagnostics ? "Диагностика" : "Оценка",
+                    historyRow.date.ToShortDateString() });
                 dataGridView1.Rows.Add(r);
             }
-            {
-                DataGridViewRow r = new DataGridViewRow();
-                DataGridViewTextBoxCell a = new DataGridViewTextBoxCell();
-                a.Value = "Иван";
-                r.Cells.Add(a);
-                DataGridViewTextBoxCell b = new DataGridViewTextBoxCell();
-                b.Value = "Иванов";
-                r.Cells.Add(b);
-                DataGridViewTextBoxCell c = new DataGridViewTextBoxCell();
-                c.Value = "Иванович";
-                r.Cells.Add(c);
-                DataGridViewLinkCell d = new DataGridViewLinkCell();
-                d.Value = "Оценка";
-                r.Cells.Add(d);
-                dataGridView1.Rows.Add(r);
-            } 
+
         }
     }
 }
