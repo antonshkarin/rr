@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.wizardControl1 = new AeroWizard.WizardControl();
             this.wizardPageHygieneIndex = new AeroWizard.WizardPage();
             this.textBoxHygieneIndex = new System.Windows.Forms.TextBox();
@@ -107,6 +108,7 @@
             this.wizardControl1.Size = new System.Drawing.Size(604, 459);
             this.wizardControl1.TabIndex = 0;
             this.wizardControl1.Title = "RR-Tooth";
+            this.wizardControl1.TitleIcon = ((System.Drawing.Icon)(resources.GetObject("wizardControl1.TitleIcon")));
             this.wizardControl1.SelectedPageChanged += new System.EventHandler(this.wizardControl1_SelectedPageChanged);
             // 
             // wizardPageHygieneIndex
@@ -593,6 +595,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 459);
             this.Controls.Add(this.wizardControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestForm";
             this.Text = "Выбор метода лечения";
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).EndInit();

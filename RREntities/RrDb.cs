@@ -234,9 +234,17 @@ namespace RREntities
             dbContext.SaveChanges();
         }
 
-        public List<rr_history> Find(String lastName)
+        public List<rr_history> Find(String lastName, String firstName = "", String secondName = "")
         {
-            var entries = dbContext.rr_history.Where(x => (x.last_name == lastName));
+            String whereClause = String.Empty;
+            if (lastName != "")
+                whereClause += "it.last_name = '" + lastName + "'";
+            if (firstName != "")
+                whereClause += (whereClause.Length > 0 ? " and " : "") + " it.first_name = '" + firstName + "'";
+            if (secondName != "")
+                whereClause += (whereClause.Length > 0 ? " and " : "") + " it.second_name = '" + secondName + "'";
+
+            var entries = dbContext.rr_history.Where(whereClause).OrderBy(x => x.last_name);
             return entries.ToList();
         }
     }

@@ -260,7 +260,7 @@ namespace RRTooth
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (this.textBoxLastName.Text.Length == 0)
+            if (this.textBoxLastName.Text.Length == 0 || this.textBoxFirstName.Text.Length == 0 || this.textBoxSecondName.Text.Length == 0)
                 MessageBox.Show("Не заполнены обязательные поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {

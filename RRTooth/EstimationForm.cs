@@ -25,37 +25,44 @@ namespace RRTooth
         private void button2_Click(object sender, EventArgs e)
         {
             EstimationCard ec = new EstimationCard { 
-                        СоответствиеФормыЗубаОвалуЛица = 2,
-                        ПропорцииСоблюдены = 2,
-                        РежущийКрайФестончатость = 2,
-                        КраевоеПрилегание = 2,
-                        КонтактныйПункт = 2,
-                        СоответствиеРеставрацииСрединнойЛинии = 2,
-                        СоответствиеЦвета = 2,
-                        ПлавностьПереходаЦветов = 2,
-                        ИзменениеЦветаНаГраницеРеставрацииСЗубом = 2,
-                        РежущийКрай = 2,
-                        КонтактныеПоверхности = 2,
-                        ОтсутствиеПрозрачности = 2,
-                        ГладкостьПоверхности = 2,
-                        БлескПоверхностиСухой = 2,
-                        БлескПоверхностиВлажный = 2,
-                        ОкклюзионныеВзаимоотношения = 2,
-                        ПослеоперационнаяЧувствительность = 2,
-                        Дикция = 2,
-                        СостояниеПародонтаПослеРеставрации = 2,
-                        ОценкаРеставрацииПациентом = 2
+                        СоответствиеФормыЗубаОвалуЛица = getEstimation(groupBox1),
+                        ПропорцииСоблюдены = getEstimation(groupBox2),
+                        РежущийКрайФестончатость = getEstimation(groupBox3),
+                        КраевоеПрилегание = getEstimation(groupBox4),
+                        КонтактныйПункт = getEstimation(groupBox5),
+                        СоответствиеРеставрацииСрединнойЛинии = getEstimation(groupBox6),
+                        СоответствиеЦвета = getEstimation(groupBox7),
+                        ПлавностьПереходаЦветов = getEstimation(groupBox8),
+                        ИзменениеЦветаНаГраницеРеставрацииСЗубом = getEstimation(groupBox9),
+                        РежущийКрай = getEstimation(groupBox10),
+                        КонтактныеПоверхности = getEstimation(groupBox11),
+                        ОтсутствиеПрозрачности = getEstimation(groupBox12),
+                        ГладкостьПоверхности = getEstimation(groupBox13),
+                        БлескПоверхностиСухой = getEstimation(groupBox14),
+                        БлескПоверхностиВлажный = getEstimation(groupBox15),
+                        ОкклюзионныеВзаимоотношения = getEstimation(groupBox16),
+                        ПослеоперационнаяЧувствительность = getEstimation(groupBox17),
+                        Дикция = getEstimation(groupBox18),
+                        СостояниеПародонтаПослеРеставрации = getEstimation(groupBox19),
+                        ОценкаРеставрацииПациентом = getEstimation(groupBox20)
             };
             try
             {
-                var row = rr_history.Create<EstimationCard>(/*this.textBoxFirstName.Text*/ "",
-                    /*this.textBoxSecondName.Text*/ "", /*this.textBoxLastName.Text*/ "",
-                    DateTime.Now, rr_history.RowType.Estimation, ec);
-                RrDb db = new RrDb();
-                db.Add(row);
+                if (this.textBoxFirstName.Text.Length > 0 && this.textBoxSecondName.Text.Length > 0 && this.textBoxLastName.Text.Length > 0)
+                {
+                    var row = rr_history.Create<EstimationCard>(this.textBoxFirstName.Text,
+                        this.textBoxSecondName.Text, this.textBoxLastName.Text,
+                        DateTime.Now, rr_history.RowType.Estimation, ec);
+                    RrDb db = new RrDb();
+                    db.Add(row);
 
-                MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                    MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Необходимо ввести Ф.И.О. пациента", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -68,9 +75,10 @@ namespace RRTooth
             Close();
         }
 
-        private void radioButton84_CheckedChanged(object sender, EventArgs e)
+        private int getEstimation(GroupBox gb)
         {
-
+            return Convert.ToInt32(
+                gb.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
         }
     }
 }
