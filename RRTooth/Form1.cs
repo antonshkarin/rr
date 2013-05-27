@@ -30,6 +30,25 @@ namespace RRTooth
             InitializeComponent();
         }
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            DrawBorder();
+        }
+
+        private void DrawBorder()
+        {
+            Pen myPen = new Pen(Color.Maroon);
+            myPen.Width = 2;
+            Point[] points = { new Point(0, 0), 
+                               new Point(this.Width, 0), 
+                               new Point(this.Width, this.Height),
+                               new Point(0, this.Height),
+                               new Point(0, 0) };
+            var g = this.CreateGraphics();
+            g.DrawLines(myPen, points);
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Form wizardForm = new TestForm();

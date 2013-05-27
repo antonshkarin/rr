@@ -172,7 +172,7 @@ namespace RREntities
 
             if (/*total >= 24 && */total <= 35)
                 return "Прямой метод реставрации (терапевтический метод)";
-            else if (total >= 36/* && total <= 48*/)
+            else if (total >= 36 /*&& total <= 48*/)
                 return "Непрямой метод реставрации (ортопедический метод)";
 
             throw new Exception("По кол-ву баллов и один из методов не подходит");
