@@ -222,5 +222,10 @@ namespace RRTooth
                 dataGridView1.Rows.Add(r);
             }
         }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Печать здесь");
+        }
     }
 }
