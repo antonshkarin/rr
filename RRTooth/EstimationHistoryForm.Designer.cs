@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstimationHistoryForm));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SecondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,16 +55,17 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SecondName,
             this.firstName});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(383, 210);
+            this.dataGridView1.Size = new System.Drawing.Size(516, 505);
             this.dataGridView1.TabIndex = 18;
             // 
             // SecondName
             // 
             this.SecondName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SecondName.FillWeight = 149.2386F;
             this.SecondName.HeaderText = "Критерий";
             this.SecondName.Name = "SecondName";
             this.SecondName.ReadOnly = true;
@@ -71,18 +74,32 @@
             // firstName
             // 
             this.firstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstName.FillWeight = 50.76142F;
             this.firstName.HeaderText = "Оценка";
             this.firstName.Name = "firstName";
             this.firstName.ReadOnly = true;
             this.firstName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(453, 571);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrint.TabIndex = 20;
+            this.buttonPrint.Text = "Печать";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // EstimationHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 265);
+            this.ClientSize = new System.Drawing.Size(540, 610);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EstimationHistoryForm";
             this.Text = "Оценка";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -97,5 +114,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SecondName;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }
