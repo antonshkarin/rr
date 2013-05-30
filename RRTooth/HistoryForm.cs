@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using RREntities;
+using System.Web.Script.Serialization;
 
 namespace RRTooth
 {
@@ -40,6 +41,7 @@ namespace RRTooth
                             historyRow.second_name,  
                             historyRow.type == (Int64)rr_history.RowType.Diagnostics ? "Диагностика" : "Оценка",
                             historyRow.date.ToShortDateString() });
+                        r.Tag = historyRow;
                         dataGridView1.Rows.Add(r);
                     }
                 }
@@ -51,6 +53,28 @@ namespace RRTooth
             else
             {
                 MessageBox.Show("Необходимо ввести фамилию, имя или отчество пациента", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == this.dataGridView1.Columns["type"].Index)
+            {
+
+                var entry = this.dataGridView1.Rows[e.RowIndex].Tag as rr_history;
+
+                if (entry.type == (Int64)RREntities.rr_history.RowType.Diagnostics)
+                {
+                    DiagHistoryForm form = new DiagHistoryForm(entry);
+                    form.ShowDialog();
+                    //var card = serializer.Deserialize<DiagnosticCard>(entry.info);
+                }
+                else
+                {
+                    EstimationHistoryForm form = new EstimationHistoryForm(entry);
+                    form.ShowDialog();
+                    //var estimation = serializer.Deserialize<EstimationCard>(entry.info);
+                }
             }
         }
     }

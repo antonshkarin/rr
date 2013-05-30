@@ -27,3 +27,9 @@ D:\Projects_2010\RRTooth_git\rr\RREntities\bin\Debug\RREntities.pdb
 D:\Projects_2010\RRTooth_git\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects_2010\RRTooth_git\rr\RREntities\obj\Debug\RREntities.dll
 D:\Projects_2010\RRTooth_git\rr\RREntities\obj\Debug\RREntities.pdb
+D:\20.05\rr\RREntities\bin\Debug\RREntities.dll.config
+D:\20.05\rr\RREntities\bin\Debug\RREntities.dll
+D:\20.05\rr\RREntities\bin\Debug\RREntities.pdb
+D:\20.05\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
+D:\20.05\rr\RREntities\obj\Debug\RREntities.dll
+D:\20.05\rr\RREntities\obj\Debug\RREntities.pdb

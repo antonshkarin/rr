@@ -54,7 +54,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="RrHistory.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RrHistory.Designer.cs</LastGenOutput>

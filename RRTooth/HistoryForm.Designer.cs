@@ -77,21 +77,21 @@
             this.textBoxSecondName.Location = new System.Drawing.Point(100, 70);
             this.textBoxSecondName.Name = "textBoxSecondName";
             this.textBoxSecondName.Size = new System.Drawing.Size(153, 20);
-            this.textBoxSecondName.TabIndex = 10;
+            this.textBoxSecondName.TabIndex = 3;
             // 
             // textBoxLastName
             // 
             this.textBoxLastName.Location = new System.Drawing.Point(100, 12);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(153, 20);
-            this.textBoxLastName.TabIndex = 9;
+            this.textBoxLastName.TabIndex = 1;
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.Location = new System.Drawing.Point(100, 41);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(153, 20);
-            this.textBoxFirstName.TabIndex = 8;
+            this.textBoxFirstName.TabIndex = 2;
             // 
             // button1
             // 
@@ -120,6 +120,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(640, 148);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SecondName
             // 

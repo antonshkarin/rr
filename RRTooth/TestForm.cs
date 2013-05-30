@@ -44,7 +44,7 @@ namespace RRTooth
         private void wizardPageResistanceEname_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelDescResistanceEname.Text = Properties.Resources.DescResistanceEname;
-            comboBoxResistanceEname.SelectedIndex = 0;
+            //comboBoxResistanceEname.SelectedIndex = 0;
         }
 
         private void wizardPageToothCrownDestruction_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
@@ -115,7 +115,7 @@ namespace RRTooth
 
         private void wizardPageResistanceEname_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
         {
-            switch (comboBoxResistanceEname.SelectedIndex)
+            /*switch (comboBoxResistanceEname.SelectedIndex)
             {
                 case 0:
                     diagnosticCard.ResistanceEnamelLevel = 75;
@@ -126,6 +126,31 @@ namespace RRTooth
                 case 2:
                     diagnosticCard.ResistanceEnamelLevel = 15;
                     break;
+            }*/
+            try
+            {
+
+                if (textBoxResistanceEname.Text.Length == 0)
+                {
+                    MessageBox.Show("Значение не должно быть пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                    return;
+                }
+
+                int b = Convert.ToInt32(textBoxResistanceEname.Text);
+                if (b < 0 || b > 100)
+                {
+                    MessageBox.Show("Значение должно быть в диапазоне от 0 до 100 процентов", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                    return;
+                }
+                diagnosticCard.ResistanceEnamelLevel = b;
+            }
+            catch
+            {
+                MessageBox.Show("Введено некорректное значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true;
+                return;
             }
         }
 
