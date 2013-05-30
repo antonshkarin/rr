@@ -33,3 +33,9 @@ D:\20.05\rr\RREntities\bin\Debug\RREntities.pdb
 D:\20.05\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
 D:\20.05\rr\RREntities\obj\Debug\RREntities.dll
 D:\20.05\rr\RREntities\obj\Debug\RREntities.pdb
+G:\30.05\rr\RREntities\bin\Debug\RREntities.dll.config
+G:\30.05\rr\RREntities\bin\Debug\RREntities.dll
+G:\30.05\rr\RREntities\bin\Debug\RREntities.pdb
+G:\30.05\rr\RREntities\obj\Debug\ResolveAssemblyReference.cache
+G:\30.05\rr\RREntities\obj\Debug\RREntities.dll
+G:\30.05\rr\RREntities\obj\Debug\RREntities.pdb

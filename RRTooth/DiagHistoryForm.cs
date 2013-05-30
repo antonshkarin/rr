@@ -223,9 +223,40 @@ namespace RRTooth
             }
         }
 
+        Bitmap memoryImage;
+
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            //myGraphics.sc
+            Size s = this.dataGridView1.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            
+            //Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            //memoryGraphics.CopyFromScreen(this.Location.X + this.dataGridView1.Location.X, this.Location.Y + this.dataGridView1.Location.Y, 0, 0, s);
+            
+            this.dataGridView1.DrawToBitmap(memoryImage, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+            //e.Graphics.DrawImage(bm, 0, 0);
+        }
+
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Печать здесь");
+            CaptureScreen();
+            printDialog1.Document = printDocument1;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                //printDo
+                printDocument1.Print();
+            }
+            //printDocument1.
+            //printDocument1.Print();
+            //MessageBox.Show("Печать здесь");
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, 0, 0);
         }
     }
 }
