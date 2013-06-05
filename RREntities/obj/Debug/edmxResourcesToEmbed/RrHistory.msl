@@ -4,6 +4,9 @@
     <EntitySetMapping Name="rr_history">
       <EntityTypeMapping TypeName="rrModel.rr_history">
         <MappingFragment StoreEntitySet="rr_history">
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="card_number" ColumnName="card_number" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="first_name" ColumnName="first_name" />
           <ScalarProperty Name="second_name" ColumnName="second_name" />
