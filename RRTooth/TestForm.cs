@@ -237,6 +237,14 @@ namespace RRTooth
         private void wizardPage10_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelMethod.Text = diagnosticCard.chooseMethod();
+            if (labelMethod.Text == "Прямой метод реставрации (терапевтический метод)")
+            {
+                pictureBox1.Image = Properties.Resources.tooths1;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.tooths2;
+            }
         }
 
         private void wizardPage10_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)

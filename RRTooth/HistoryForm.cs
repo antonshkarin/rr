@@ -38,8 +38,10 @@ namespace RRTooth
                         r.CreateCells(dataGridView1, new Object[] { 
                             historyRow.last_name, 
                             historyRow.first_name,
-                            historyRow.second_name,  
+                            historyRow.second_name,
+                            "01.01.2013", // TODO
                             historyRow.type == (Int64)rr_history.RowType.Diagnostics ? "Диагностика" : "Оценка",
+                            "Добавить",
                             historyRow.date.ToShortDateString() });
                         r.Tag = historyRow;
                         dataGridView1.Rows.Add(r);

@@ -148,5 +148,19 @@ namespace RRTooth.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap tooths1 {
+            get {
+                object obj = ResourceManager.GetObject("tooths1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tooths2 {
+            get {
+                object obj = ResourceManager.GetObject("tooths2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

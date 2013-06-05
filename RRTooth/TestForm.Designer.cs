@@ -65,16 +65,21 @@
             this.comboBoxProfessionalHarmfulness = new System.Windows.Forms.ComboBox();
             this.labelProfessionalHarmfulness = new System.Windows.Forms.Label();
             this.wizardPage10 = new AeroWizard.WizardPage();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.labelSecondName = new System.Windows.Forms.Label();
-            this.labelLastName = new System.Windows.Forms.Label();
-            this.labelFirstName = new System.Windows.Forms.Label();
-            this.textBoxSecondName = new System.Windows.Forms.TextBox();
-            this.textBoxLastName = new System.Windows.Forms.TextBox();
-            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelMethod = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelSecondName = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBoxSecondName = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPageHygieneIndex.SuspendLayout();
             this.wizardPageToothColor.SuspendLayout();
@@ -86,6 +91,8 @@
             this.wizardPageBadHabits.SuspendLayout();
             this.wizardPageProfessionalHarmfulness.SuspendLayout();
             this.wizardPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // wizardControl1
@@ -117,7 +124,7 @@
             this.wizardPageHygieneIndex.Controls.Add(this.labelHygieneIndex);
             this.wizardPageHygieneIndex.Controls.Add(this.labelDescHygieneIndex);
             this.wizardPageHygieneIndex.Name = "wizardPageHygieneIndex";
-            this.wizardPageHygieneIndex.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageHygieneIndex.Size = new System.Drawing.Size(557, 304);
             this.wizardPageHygieneIndex.TabIndex = 0;
             this.wizardPageHygieneIndex.Text = "Индекс гигиены";
             this.wizardPageHygieneIndex.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageHygieneIndex_Commit);
@@ -158,7 +165,7 @@
             this.wizardPageToothColor.Controls.Add(this.labelDescToothColor);
             this.wizardPageToothColor.Controls.Add(this.labelToothColorVisual);
             this.wizardPageToothColor.Name = "wizardPageToothColor";
-            this.wizardPageToothColor.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageToothColor.Size = new System.Drawing.Size(557, 304);
             this.wizardPageToothColor.TabIndex = 1;
             this.wizardPageToothColor.Text = "Цвет зуба";
             this.wizardPageToothColor.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageToothColor_Commit);
@@ -225,7 +232,7 @@
             this.wizardPageFissure.Controls.Add(this.labelFissure);
             this.wizardPageFissure.Controls.Add(this.comboBoxFissure);
             this.wizardPageFissure.Name = "wizardPageFissure";
-            this.wizardPageFissure.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageFissure.Size = new System.Drawing.Size(557, 304);
             this.wizardPageFissure.TabIndex = 9;
             this.wizardPageFissure.Text = "Наличие трещин";
             this.wizardPageFissure.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageFissure_Commit);
@@ -269,7 +276,7 @@
             this.wizardPageResistanceEname.Controls.Add(this.labelDescResistanceEname);
             this.wizardPageResistanceEname.Controls.Add(this.labelResistanceEname);
             this.wizardPageResistanceEname.Name = "wizardPageResistanceEname";
-            this.wizardPageResistanceEname.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageResistanceEname.Size = new System.Drawing.Size(557, 304);
             this.wizardPageResistanceEname.TabIndex = 3;
             this.wizardPageResistanceEname.Text = "Уровень резистентности эмали";
             this.wizardPageResistanceEname.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageResistanceEname_Commit);
@@ -307,7 +314,7 @@
             this.wizardPageToothCrownDestruction.Controls.Add(this.comboBoxToothCrownDestruction);
             this.wizardPageToothCrownDestruction.Controls.Add(this.labelToothCrownDestruction);
             this.wizardPageToothCrownDestruction.Name = "wizardPageToothCrownDestruction";
-            this.wizardPageToothCrownDestruction.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageToothCrownDestruction.Size = new System.Drawing.Size(557, 304);
             this.wizardPageToothCrownDestruction.TabIndex = 4;
             this.wizardPageToothCrownDestruction.Text = "Индекс разрушения коронки зуба";
             this.wizardPageToothCrownDestruction.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageToothCrownDestruction_Commit);
@@ -350,7 +357,7 @@
             this.wizardPageBite.Controls.Add(this.comboBoxBite);
             this.wizardPageBite.Controls.Add(this.labelBite);
             this.wizardPageBite.Name = "wizardPageBite";
-            this.wizardPageBite.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageBite.Size = new System.Drawing.Size(557, 304);
             this.wizardPageBite.TabIndex = 5;
             this.wizardPageBite.Text = "Прикус";
             this.wizardPageBite.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageBite_Commit);
@@ -383,7 +390,7 @@
             this.wizardPagePeriodontalDisease.Controls.Add(this.labelPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Controls.Add(this.comboBoxPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Name = "wizardPagePeriodontalDisease";
-            this.wizardPagePeriodontalDisease.Size = new System.Drawing.Size(557, 307);
+            this.wizardPagePeriodontalDisease.Size = new System.Drawing.Size(557, 304);
             this.wizardPagePeriodontalDisease.TabIndex = 6;
             this.wizardPagePeriodontalDisease.Text = "Наличие заболеваний пародонта (только хронический процесс)";
             this.wizardPagePeriodontalDisease.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPagePeriodontalDisease_Commit);
@@ -416,7 +423,7 @@
             this.wizardPageBadHabits.Controls.Add(this.comboBoxBadHabits);
             this.wizardPageBadHabits.Controls.Add(this.label1BadHabits);
             this.wizardPageBadHabits.Name = "wizardPageBadHabits";
-            this.wizardPageBadHabits.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageBadHabits.Size = new System.Drawing.Size(557, 304);
             this.wizardPageBadHabits.TabIndex = 7;
             this.wizardPageBadHabits.Text = "Вредные привычки";
             this.wizardPageBadHabits.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageBadHabits_Commit);
@@ -449,7 +456,7 @@
             this.wizardPageProfessionalHarmfulness.Controls.Add(this.comboBoxProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Controls.Add(this.labelProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Name = "wizardPageProfessionalHarmfulness";
-            this.wizardPageProfessionalHarmfulness.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageProfessionalHarmfulness.Size = new System.Drawing.Size(557, 304);
             this.wizardPageProfessionalHarmfulness.TabIndex = 8;
             this.wizardPageProfessionalHarmfulness.Text = "Профессиональные вредности";
             this.wizardPageProfessionalHarmfulness.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageProfessionalHarmfulness_Commit);
@@ -479,87 +486,32 @@
             // 
             // wizardPage10
             // 
-            this.wizardPage10.Controls.Add(this.buttonSave);
-            this.wizardPage10.Controls.Add(this.labelSecondName);
-            this.wizardPage10.Controls.Add(this.labelLastName);
-            this.wizardPage10.Controls.Add(this.labelFirstName);
-            this.wizardPage10.Controls.Add(this.textBoxSecondName);
-            this.wizardPage10.Controls.Add(this.textBoxLastName);
-            this.wizardPage10.Controls.Add(this.textBoxFirstName);
+            this.wizardPage10.Controls.Add(this.pictureBox1);
             this.wizardPage10.Controls.Add(this.labelMethod);
             this.wizardPage10.Controls.Add(this.label14);
             this.wizardPage10.Controls.Add(this.groupBox1);
             this.wizardPage10.Name = "wizardPage10";
-            this.wizardPage10.Size = new System.Drawing.Size(557, 307);
+            this.wizardPage10.Size = new System.Drawing.Size(557, 304);
             this.wizardPage10.TabIndex = 10;
             this.wizardPage10.Text = "Метод лечения";
             this.wizardPage10.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage10_Commit);
             this.wizardPage10.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPage10_Initialize);
             // 
-            // buttonSave
+            // pictureBox1
             // 
-            this.buttonSave.Location = new System.Drawing.Point(115, 219);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(183, 23);
-            this.buttonSave.TabIndex = 5;
-            this.buttonSave.Text = "Сохранить в базу данных";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // labelSecondName
-            // 
-            this.labelSecondName.AutoSize = true;
-            this.labelSecondName.Location = new System.Drawing.Point(42, 180);
-            this.labelSecondName.Name = "labelSecondName";
-            this.labelSecondName.Size = new System.Drawing.Size(61, 15);
-            this.labelSecondName.TabIndex = 7;
-            this.labelSecondName.Text = "Отчество:";
-            // 
-            // labelLastName
-            // 
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(42, 121);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(61, 15);
-            this.labelLastName.TabIndex = 6;
-            this.labelLastName.Text = "Фамилия:";
-            // 
-            // labelFirstName
-            // 
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(42, 151);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(34, 15);
-            this.labelFirstName.TabIndex = 5;
-            this.labelFirstName.Text = "Имя:";
-            // 
-            // textBoxSecondName
-            // 
-            this.textBoxSecondName.Location = new System.Drawing.Point(109, 176);
-            this.textBoxSecondName.Name = "textBoxSecondName";
-            this.textBoxSecondName.Size = new System.Drawing.Size(189, 23);
-            this.textBoxSecondName.TabIndex = 4;
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Location = new System.Drawing.Point(109, 118);
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(189, 23);
-            this.textBoxLastName.TabIndex = 2;
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(109, 147);
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(189, 23);
-            this.textBoxFirstName.TabIndex = 3;
+            this.pictureBox1.Location = new System.Drawing.Point(334, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // labelMethod
             // 
             this.labelMethod.AutoSize = true;
             this.labelMethod.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMethod.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMethod.Location = new System.Drawing.Point(40, 44);
+            this.labelMethod.Location = new System.Drawing.Point(40, 40);
             this.labelMethod.Name = "labelMethod";
             this.labelMethod.Size = new System.Drawing.Size(142, 25);
             this.labelMethod.TabIndex = 1;
@@ -576,12 +528,113 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(27, 90);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.labelSecondName);
+            this.groupBox1.Controls.Add(this.label47);
+            this.groupBox1.Controls.Add(this.labelLastName);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.labelFirstName);
+            this.groupBox1.Controls.Add(this.label42);
+            this.groupBox1.Controls.Add(this.textBoxSecondName);
+            this.groupBox1.Controls.Add(this.textBoxLastName);
+            this.groupBox1.Controls.Add(this.textBoxFirstName);
+            this.groupBox1.Controls.Add(this.buttonSave);
+            this.groupBox1.Location = new System.Drawing.Point(27, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(303, 176);
+            this.groupBox1.Size = new System.Drawing.Size(285, 210);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Сохранение результата";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(104, 109);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(167, 23);
+            this.dateTimePicker1.TabIndex = 9;
+            // 
+            // labelSecondName
+            // 
+            this.labelSecondName.AutoSize = true;
+            this.labelSecondName.Location = new System.Drawing.Point(10, 83);
+            this.labelSecondName.Name = "labelSecondName";
+            this.labelSecondName.Size = new System.Drawing.Size(61, 15);
+            this.labelSecondName.TabIndex = 7;
+            this.labelSecondName.Text = "Отчество:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(9, 141);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(59, 15);
+            this.label47.TabIndex = 22;
+            this.label47.Text = "№ карты:";
+            // 
+            // labelLastName
+            // 
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(10, 25);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(61, 15);
+            this.labelLastName.TabIndex = 6;
+            this.labelLastName.Text = "Фамилия:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(104, 138);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(167, 23);
+            this.textBox2.TabIndex = 21;
+            // 
+            // labelFirstName
+            // 
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(10, 54);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(34, 15);
+            this.labelFirstName.TabIndex = 5;
+            this.labelFirstName.Text = "Имя:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(10, 112);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(93, 15);
+            this.label42.TabIndex = 20;
+            this.label42.Text = "Дата рождения:";
+            // 
+            // textBoxSecondName
+            // 
+            this.textBoxSecondName.Location = new System.Drawing.Point(104, 80);
+            this.textBoxSecondName.Name = "textBoxSecondName";
+            this.textBoxSecondName.Size = new System.Drawing.Size(167, 23);
+            this.textBoxSecondName.TabIndex = 4;
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Location = new System.Drawing.Point(104, 22);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(167, 23);
+            this.textBoxLastName.TabIndex = 2;
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Location = new System.Drawing.Point(104, 51);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(167, 23);
+            this.textBoxFirstName.TabIndex = 3;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(104, 171);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(167, 23);
+            this.buttonSave.TabIndex = 5;
+            this.buttonSave.Text = "Сохранить в базу данных";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // TestForm
             // 
@@ -613,6 +666,9 @@
             this.wizardPageProfessionalHarmfulness.PerformLayout();
             this.wizardPage10.ResumeLayout(false);
             this.wizardPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -665,5 +721,10 @@
         private System.Windows.Forms.ComboBox comboBoxToothColorInstrumental;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxResistanceEname;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

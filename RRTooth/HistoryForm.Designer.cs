@@ -40,7 +40,9 @@
             this.SecondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Photo = new System.Windows.Forms.DataGridViewLinkColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -112,13 +114,15 @@
             this.SecondName,
             this.firstName,
             this.lastName,
+            this.birthDate,
             this.type,
+            this.Photo,
             this.date});
             this.dataGridView1.Location = new System.Drawing.Point(12, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(640, 292);
+            this.dataGridView1.Size = new System.Drawing.Size(792, 292);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -146,6 +150,13 @@
             this.lastName.ReadOnly = true;
             this.lastName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // birthDate
+            // 
+            this.birthDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.birthDate.HeaderText = "Дата рождения";
+            this.birthDate.Name = "birthDate";
+            this.birthDate.ReadOnly = true;
+            // 
             // type
             // 
             this.type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -154,6 +165,14 @@
             this.type.ReadOnly = true;
             this.type.Text = "";
             this.type.VisitedLinkColor = System.Drawing.Color.Blue;
+            // 
+            // Photo
+            // 
+            this.Photo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Photo.HeaderText = "Фотография";
+            this.Photo.Name = "Photo";
+            this.Photo.ReadOnly = true;
+            this.Photo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // date
             // 
@@ -167,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 417);
+            this.ClientSize = new System.Drawing.Size(816, 417);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelSecondName);
@@ -200,7 +219,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SecondName;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthDate;
         private System.Windows.Forms.DataGridViewLinkColumn type;
+        private System.Windows.Forms.DataGridViewLinkColumn Photo;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }
