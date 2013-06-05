@@ -13,6 +13,8 @@ namespace RRTooth
 {
     public partial class EstimationHistoryForm : Form
     {
+        Bitmap memoryImage;
+
         public EstimationHistoryForm()
         {
             InitializeComponent();
@@ -187,9 +189,29 @@ namespace RRTooth
             }
         }
 
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.dataGridView1.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+
+            this.dataGridView1.DrawToBitmap(memoryImage, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+        }
+
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Печать здесь");
+            CaptureScreen();
+            printDialog1.Document = printDocument1;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, 0, 0);
         }
     }
 }

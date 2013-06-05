@@ -117,7 +117,7 @@
             this.wizardPageHygieneIndex.Controls.Add(this.labelHygieneIndex);
             this.wizardPageHygieneIndex.Controls.Add(this.labelDescHygieneIndex);
             this.wizardPageHygieneIndex.Name = "wizardPageHygieneIndex";
-            this.wizardPageHygieneIndex.Size = new System.Drawing.Size(557, 307);
+            this.wizardPageHygieneIndex.Size = new System.Drawing.Size(557, 304);
             this.wizardPageHygieneIndex.TabIndex = 0;
             this.wizardPageHygieneIndex.Text = "Индекс гигиены";
             this.wizardPageHygieneIndex.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageHygieneIndex_Commit);

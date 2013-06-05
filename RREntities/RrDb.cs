@@ -15,7 +15,7 @@ namespace RREntities
         {
             String connStr = String.Format(
                 "metadata=res://*/RrHistory.csdl|res://*/RrHistory.ssdl|res://*/RrHistory.msl;provider=System.Data.SQLite;provider connection string='{0}'",
-                ConfigurationManager.ConnectionStrings["rr_dbEntities1"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["rr_dbEntities"].ConnectionString);
             return connStr;
         }
 
@@ -212,12 +212,22 @@ namespace RREntities
             Estimation
         }
 
-        public static rr_history Create<T>(String firstName, String secondName, String lastName, DateTime date, RowType type, T info)
+        public static rr_history Create<T>(String firstName, String secondName, String lastName, DateTime date, RowType type, T info,
+            DateTime birthday, int cardNumber, byte[] photo)
         {
             JavaScriptSerializer serializer = new JavaScriptSerializer(); 
             String serInfo = serializer.Serialize(info);
 
-            rr_history row = new rr_history { first_name = firstName, second_name = secondName, last_name = lastName, date = date, type = (Int64)type, info = serInfo };
+            rr_history row = new rr_history { 
+                first_name = firstName, 
+                second_name = secondName, 
+                last_name = lastName, 
+                date = date, 
+                type = (Int64)type, 
+                info = serInfo,
+                birthday = birthday,
+                card_number = cardNumber,
+                photo = photo };
 
             return row;
         }
