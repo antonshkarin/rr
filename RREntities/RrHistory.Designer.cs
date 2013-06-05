@@ -118,7 +118,8 @@ namespace RREntities
         /// <param name="date">Initial value of the date property.</param>
         /// <param name="type">Initial value of the type property.</param>
         /// <param name="info">Initial value of the info property.</param>
-        public static rr_history Createrr_history(global::System.Int64 id, global::System.String last_name, global::System.DateTime date, global::System.Int64 type, global::System.String info)
+        /// <param name="card_number">Initial value of the card_number property.</param>
+        public static rr_history Createrr_history(global::System.Int64 id, global::System.String last_name, global::System.DateTime date, global::System.Int64 type, global::System.String info, global::System.Int64 card_number)
         {
             rr_history rr_history = new rr_history();
             rr_history.id = id;
@@ -126,6 +127,7 @@ namespace RREntities
             rr_history.date = date;
             rr_history.type = type;
             rr_history.info = info;
+            rr_history.card_number = card_number;
             return rr_history;
         }
 
@@ -302,6 +304,78 @@ namespace RREntities
         private global::System.String _info;
         partial void OninfoChanging(global::System.String value);
         partial void OninfoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> birthday
+        {
+            get
+            {
+                return _birthday;
+            }
+            set
+            {
+                OnbirthdayChanging(value);
+                ReportPropertyChanging("birthday");
+                _birthday = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("birthday");
+                OnbirthdayChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _birthday;
+        partial void OnbirthdayChanging(Nullable<global::System.DateTime> value);
+        partial void OnbirthdayChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 card_number
+        {
+            get
+            {
+                return _card_number;
+            }
+            set
+            {
+                Oncard_numberChanging(value);
+                ReportPropertyChanging("card_number");
+                _card_number = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("card_number");
+                Oncard_numberChanged();
+            }
+        }
+        private global::System.Int64 _card_number;
+        partial void Oncard_numberChanging(global::System.Int64 value);
+        partial void Oncard_numberChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] photo
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_photo);
+            }
+            set
+            {
+                OnphotoChanging(value);
+                ReportPropertyChanging("photo");
+                _photo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("photo");
+                OnphotoChanged();
+            }
+        }
+        private global::System.Byte[] _photo;
+        partial void OnphotoChanging(global::System.Byte[] value);
+        partial void OnphotoChanged();
 
         #endregion
     
