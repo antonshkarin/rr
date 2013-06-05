@@ -69,17 +69,19 @@
             this.labelMethod = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeBirthday = new System.Windows.Forms.DateTimePicker();
             this.labelSecondName = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxCardNumber = new System.Windows.Forms.TextBox();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.textBoxSecondName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.dateTimeCreating = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPageHygieneIndex.SuspendLayout();
             this.wizardPageToothColor.SuspendLayout();
@@ -528,35 +530,37 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTimeCreating);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.dateTimeBirthday);
             this.groupBox1.Controls.Add(this.labelSecondName);
             this.groupBox1.Controls.Add(this.label47);
             this.groupBox1.Controls.Add(this.labelLastName);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxCardNumber);
             this.groupBox1.Controls.Add(this.labelFirstName);
             this.groupBox1.Controls.Add(this.label42);
             this.groupBox1.Controls.Add(this.textBoxSecondName);
             this.groupBox1.Controls.Add(this.textBoxLastName);
             this.groupBox1.Controls.Add(this.textBoxFirstName);
             this.groupBox1.Controls.Add(this.buttonSave);
-            this.groupBox1.Location = new System.Drawing.Point(27, 76);
+            this.groupBox1.Location = new System.Drawing.Point(27, 62);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(285, 210);
+            this.groupBox1.Size = new System.Drawing.Size(301, 242);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Сохранение результата";
             // 
-            // dateTimePicker1
+            // dateTimeBirthday
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(104, 109);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(167, 23);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimeBirthday.Location = new System.Drawing.Point(128, 145);
+            this.dateTimeBirthday.Name = "dateTimeBirthday";
+            this.dateTimeBirthday.Size = new System.Drawing.Size(167, 23);
+            this.dateTimeBirthday.TabIndex = 9;
             // 
             // labelSecondName
             // 
             this.labelSecondName.AutoSize = true;
-            this.labelSecondName.Location = new System.Drawing.Point(10, 83);
+            this.labelSecondName.Location = new System.Drawing.Point(10, 122);
             this.labelSecondName.Name = "labelSecondName";
             this.labelSecondName.Size = new System.Drawing.Size(61, 15);
             this.labelSecondName.TabIndex = 7;
@@ -565,7 +569,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(9, 141);
+            this.label47.Location = new System.Drawing.Point(9, 180);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(59, 15);
             this.label47.TabIndex = 22;
@@ -574,23 +578,23 @@
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(10, 25);
+            this.labelLastName.Location = new System.Drawing.Point(10, 64);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(61, 15);
             this.labelLastName.TabIndex = 6;
             this.labelLastName.Text = "Фамилия:";
             // 
-            // textBox2
+            // textBoxCardNumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 23);
-            this.textBox2.TabIndex = 21;
+            this.textBoxCardNumber.Location = new System.Drawing.Point(128, 174);
+            this.textBoxCardNumber.Name = "textBoxCardNumber";
+            this.textBoxCardNumber.Size = new System.Drawing.Size(167, 23);
+            this.textBoxCardNumber.TabIndex = 21;
             // 
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(10, 54);
+            this.labelFirstName.Location = new System.Drawing.Point(10, 93);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(34, 15);
             this.labelFirstName.TabIndex = 5;
@@ -599,7 +603,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(10, 112);
+            this.label42.Location = new System.Drawing.Point(10, 151);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(93, 15);
             this.label42.TabIndex = 20;
@@ -607,34 +611,50 @@
             // 
             // textBoxSecondName
             // 
-            this.textBoxSecondName.Location = new System.Drawing.Point(104, 80);
+            this.textBoxSecondName.Location = new System.Drawing.Point(128, 116);
             this.textBoxSecondName.Name = "textBoxSecondName";
             this.textBoxSecondName.Size = new System.Drawing.Size(167, 23);
             this.textBoxSecondName.TabIndex = 4;
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(104, 22);
+            this.textBoxLastName.Location = new System.Drawing.Point(128, 61);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(167, 23);
             this.textBoxLastName.TabIndex = 2;
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(104, 51);
+            this.textBoxFirstName.Location = new System.Drawing.Point(128, 87);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(167, 23);
             this.textBoxFirstName.TabIndex = 3;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(104, 171);
+            this.buttonSave.Location = new System.Drawing.Point(104, 205);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(167, 23);
             this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "Сохранить в базу данных";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // dateTimeCreating
+            // 
+            this.dateTimeCreating.Location = new System.Drawing.Point(128, 31);
+            this.dateTimeCreating.Name = "dateTimeCreating";
+            this.dateTimeCreating.Size = new System.Drawing.Size(167, 23);
+            this.dateTimeCreating.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 15);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Дата обследования:";
             // 
             // TestForm
             // 
@@ -721,10 +741,12 @@
         private System.Windows.Forms.ComboBox comboBoxToothColorInstrumental;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxResistanceEname;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimeBirthday;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxCardNumber;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dateTimeCreating;
+        private System.Windows.Forms.Label label1;
     }
 }

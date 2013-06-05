@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using RREntities;
 using System.Web.Script.Serialization;
+using System.IO;
 
 namespace RRTooth
 {
@@ -39,7 +40,7 @@ namespace RRTooth
                             historyRow.last_name, 
                             historyRow.first_name,
                             historyRow.second_name,
-                            "01.01.2013", // TODO
+                            historyRow.birthday.Value.ToShortDateString(),
                             historyRow.type == (Int64)rr_history.RowType.Diagnostics ? "Диагностика" : "Оценка",
                             "Добавить",
                             historyRow.date.ToShortDateString() });
@@ -62,7 +63,6 @@ namespace RRTooth
         {
             if (e.ColumnIndex == this.dataGridView1.Columns["type"].Index)
             {
-
                 var entry = this.dataGridView1.Rows[e.RowIndex].Tag as rr_history;
 
                 if (entry.type == (Int64)RREntities.rr_history.RowType.Diagnostics)
@@ -76,6 +76,33 @@ namespace RRTooth
                     EstimationHistoryForm form = new EstimationHistoryForm(entry);
                     form.ShowDialog();
                     //var estimation = serializer.Deserialize<EstimationCard>(entry.info);
+                }
+            }
+            else if (e.ColumnIndex == this.dataGridView1.Columns["Photo"].Index)
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.CheckFileExists = true;
+                openFileDialog.AddExtension = true;
+                openFileDialog.Multiselect = false;
+                openFileDialog.Filter = "Фото (*.jpg; *.jpeg; *.png; *.gif;) | *.jpg; *.jpeg; *.png; *.gif";
+
+                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    try
+                    {
+                        String s = openFileDialog.FileName;
+                        var entry = this.dataGridView1.Rows[e.RowIndex].Tag as rr_history;
+                        entry.photo = File.ReadAllBytes(s);
+
+                        RrDb db = new RrDb();
+                        db.Edit(entry);
+
+                        MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

@@ -119,7 +119,7 @@ namespace RREntities
         /// <param name="type">Initial value of the type property.</param>
         /// <param name="info">Initial value of the info property.</param>
         /// <param name="card_number">Initial value of the card_number property.</param>
-        public static rr_history Createrr_history(global::System.Int64 id, global::System.String last_name, global::System.DateTime date, global::System.Int64 type, global::System.String info, global::System.Int64 card_number)
+        public static rr_history Createrr_history(global::System.Int64 id, global::System.String last_name, global::System.DateTime date, global::System.Int64 type, global::System.String info, global::System.String card_number)
         {
             rr_history rr_history = new rr_history();
             rr_history.id = id;
@@ -334,7 +334,7 @@ namespace RREntities
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int64 card_number
+        public global::System.String card_number
         {
             get
             {
@@ -344,13 +344,13 @@ namespace RREntities
             {
                 Oncard_numberChanging(value);
                 ReportPropertyChanging("card_number");
-                _card_number = StructuralObject.SetValidValue(value);
+                _card_number = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("card_number");
                 Oncard_numberChanged();
             }
         }
-        private global::System.Int64 _card_number;
-        partial void Oncard_numberChanging(global::System.Int64 value);
+        private global::System.String _card_number;
+        partial void Oncard_numberChanging(global::System.String value);
         partial void Oncard_numberChanged();
     
         /// <summary>

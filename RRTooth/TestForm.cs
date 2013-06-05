@@ -299,8 +299,9 @@ namespace RRTooth
             {
                 try
                 {
-                    var row = rr_history.Create<DiagnosticCard>(this.textBoxFirstName.Text, this.textBoxSecondName.Text, this.textBoxLastName.Text,
-                        DateTime.Now, rr_history.RowType.Diagnostics, diagnosticCard);
+                    var row = rr_history.Create<DiagnosticCard>(textBoxFirstName.Text, textBoxSecondName.Text, 
+                        textBoxLastName.Text, dateTimeCreating.Value, rr_history.RowType.Diagnostics, diagnosticCard, 
+                        dateTimeBirthday.Value, textBoxCardNumber.Text, null);
                     RrDb db = new RrDb();
                     db.Add(row);
 
