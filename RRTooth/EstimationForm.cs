@@ -34,6 +34,8 @@ namespace RRTooth
                     }
                 }
             }
+
+            showEstimation();
         }
 
         void estimation_Change(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace RRTooth
             {
                 if (rb.Checked)
                 {
-                    reCalcEstimation();
+                    showEstimation();
                 }
             }
         }
@@ -131,7 +133,7 @@ namespace RRTooth
                 return estimationVeryGood;
             else if (totalEstimation >= 60)
                 return estimationGood;
-            else if (totalEstimation >= 40)
+            else if (totalEstimation > 40)
                 return estimationNotGood;
             else
                 return estimationBad;
@@ -139,7 +141,7 @@ namespace RRTooth
 
         private void showEstimation()
         {
-
+            labelEstimationResult.Text = reCalcEstimation();
         }
     }
 }
