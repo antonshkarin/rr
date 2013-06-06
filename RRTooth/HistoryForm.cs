@@ -37,13 +37,14 @@ namespace RRTooth
                         DataGridViewRow r = new DataGridViewRow();
 
                         r.CreateCells(dataGridView1, new Object[] { 
+                            historyRow.date.ToShortDateString(),
+                            historyRow.card_number,
                             historyRow.last_name, 
                             historyRow.first_name,
                             historyRow.second_name,
                             historyRow.birthday.Value.ToShortDateString(),
                             historyRow.type == (Int64)rr_history.RowType.Diagnostics ? "Диагностика" : "Оценка",
-                            "Добавить",
-                            historyRow.date.ToShortDateString() });
+                            historyRow.photo == null ? "Добавить" : "Просмотр" });
                         r.Tag = historyRow;
                         dataGridView1.Rows.Add(r);
                     }
@@ -80,28 +81,48 @@ namespace RRTooth
             }
             else if (e.ColumnIndex == this.dataGridView1.Columns["Photo"].Index)
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.CheckFileExists = true;
-                openFileDialog.AddExtension = true;
-                openFileDialog.Multiselect = false;
-                openFileDialog.Filter = "Фото (*.jpg; *.jpeg; *.png; *.gif;) | *.jpg; *.jpeg; *.png; *.gif";
-
-                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                var entry = this.dataGridView1.Rows[e.RowIndex].Tag as rr_history;
+                if (entry.photo != null)
                 {
-                    try
-                    {
-                        String s = openFileDialog.FileName;
-                        var entry = this.dataGridView1.Rows[e.RowIndex].Tag as rr_history;
-                        entry.photo = File.ReadAllBytes(s);
+                    // Просмотр
+                    
+                    MemoryStream ms = new MemoryStream(entry.photo);
+                    Image image = Image.FromStream(ms);
+                    Form form = new Form();
 
-                        RrDb db = new RrDb();
-                        db.Edit(entry);
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Dock = DockStyle.Fill;
+                    pictureBox.Image = image;
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    form.Controls.Add(pictureBox);
 
-                        MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
+                    form.ShowDialog();
+                }
+                else
+                {
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.CheckFileExists = true;
+                    openFileDialog.AddExtension = true;
+                    openFileDialog.Multiselect = false;
+                    openFileDialog.Filter = "Фото (*.jpg; *.jpeg; *.png; *.gif;) | *.jpg; *.jpeg; *.png; *.gif";
+
+                    if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        try
+                        {
+                            String s = openFileDialog.FileName;
+                            entry.photo = File.ReadAllBytes(s);
+
+                            RrDb db = new RrDb();
+                            db.Edit(entry);
+                            this.dataGridView1.Rows[e.RowIndex].Cells["Photo"].Value = "Просмотр";
+
+                            MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
