@@ -322,12 +322,30 @@ namespace RRTooth
             }
             else
             {
+<<<<<<< HEAD
                 firstName = this.textBoxFirstName.Text;
                 secondName = this.textBoxSecondName.Text;
                 lastName = this.textBoxLastName.Text;
                 date = dateTimePicker3.Value;
                 birthdate = dateTimePicker1.Value;
                 cardNumber = Convert.ToInt32(CardNum.Text);
+=======
+                try
+                {
+                    var row = rr_history.Create<DiagnosticCard>(textBoxFirstName.Text, textBoxSecondName.Text, 
+                        textBoxLastName.Text, dateTimeCreating.Value, rr_history.RowType.Diagnostics, diagnosticCard, 
+                        dateTimeBirthday.Value, textBoxCardNumber.Text, null);
+                    RrDb db = new RrDb();
+                    db.Add(row);
+
+                    MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+>>>>>>> 9c5de6986c608fc0c57892c5a93f46114022b6a1
             }
         }
     }

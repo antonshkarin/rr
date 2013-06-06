@@ -15,7 +15,7 @@
     <Property Name="type" Type="integer" Nullable="false" />
     <Property Name="info" Type="nvarchar" Nullable="false" />
     <Property Name="birthday" Type="datetime" />
-    <Property Name="card_number" Type="integer" Nullable="false" />
+    <Property Name="card_number" Type="nvarchar" Nullable="false" />
     <Property Name="photo" Type="blob" />
   </EntityType>
 </Schema>

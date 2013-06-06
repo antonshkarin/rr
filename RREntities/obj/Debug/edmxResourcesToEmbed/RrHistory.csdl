@@ -15,7 +15,7 @@
     <Property Name="type" Type="Int64" Nullable="false" />
     <Property Name="info" Type="String" Nullable="false" MaxLength="2147483647" Unicode="true" FixedLength="false" />
     <Property Type="DateTime" Name="birthday" />
-    <Property Type="Int64" Name="card_number" Nullable="false" />
+    <Property Type="String" Name="card_number" Nullable="false" />
     <Property Type="Binary" Name="photo" MaxLength="2147483647" FixedLength="false" />
   </EntityType>
 </Schema>

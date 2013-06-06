@@ -213,7 +213,7 @@ namespace RREntities
         }
 
         public static rr_history Create<T>(String firstName, String secondName, String lastName, DateTime date, RowType type, T info,
-            DateTime birthday, int cardNumber, byte[] photo)
+            DateTime birthday, String cardNumber, byte[] photo)
         {
             JavaScriptSerializer serializer = new JavaScriptSerializer(); 
             String serInfo = serializer.Serialize(info);
@@ -241,6 +241,13 @@ namespace RREntities
         public void Add(rr_history entry)
         {
             dbContext.rr_history.AddObject(entry);
+            dbContext.SaveChanges();
+        }
+
+        public void Edit(rr_history entry)
+        {
+            var entryToUpd = dbContext.rr_history.First(e => e.id == entry.id);
+            entryToUpd = entry;
             dbContext.SaveChanges();
         }
 
