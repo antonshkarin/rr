@@ -12,6 +12,14 @@ namespace RRTooth
     public partial class TestForm : Form
     {
         private DiagnosticCard diagnosticCard;
+        private string firstName;
+        private string secondName;
+        private string lastName;
+        private DateTime date;
+        private DateTime birthdate;
+        private int cardNumber;
+
+
         public TestForm()
         {
             InitializeComponent();
@@ -249,7 +257,21 @@ namespace RRTooth
 
         private void wizardPage10_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
         {
+            try
+            {
+                var row = rr_history.Create<DiagnosticCard>(firstName, secondName, lastName,
+                    date, rr_history.RowType.Diagnostics, diagnosticCard, birthdate, cardNumber, new byte[0]);
+                RrDb db = new RrDb();
+                db.Add(row);
 
+                MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true;
+            }
         }
 
         private void wizardPageProfessionalHarmfulness_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
@@ -291,26 +313,21 @@ namespace RRTooth
             }
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void wizardPage1_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
         {
             if (this.textBoxLastName.Text.Length == 0 || this.textBoxFirstName.Text.Length == 0 || this.textBoxSecondName.Text.Length == 0)
+            {
                 MessageBox.Show("Не заполнены обязательные поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true;
+            }
             else
             {
-                try
-                {
-                    var row = rr_history.Create<DiagnosticCard>(this.textBoxFirstName.Text, this.textBoxSecondName.Text, this.textBoxLastName.Text,
-                        DateTime.Now, rr_history.RowType.Diagnostics, diagnosticCard);
-                    RrDb db = new RrDb();
-                    db.Add(row);
-
-                    MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                firstName = this.textBoxFirstName.Text;
+                secondName = this.textBoxSecondName.Text;
+                lastName = this.textBoxLastName.Text;
+                date = dateTimePicker3.Value;
+                birthdate = dateTimePicker1.Value;
+                cardNumber = Convert.ToInt32(CardNum.Text);
             }
         }
     }

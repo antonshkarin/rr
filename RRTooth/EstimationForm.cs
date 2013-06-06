@@ -52,7 +52,7 @@ namespace RRTooth
                 {
                     var row = rr_history.Create<EstimationCard>(this.textBoxFirstName.Text,
                         this.textBoxSecondName.Text, this.textBoxLastName.Text,
-                        DateTime.Now, rr_history.RowType.Estimation, ec, dateTimePicker1.Value, CardNum.Text, null);
+                        DateTime.Now, rr_history.RowType.Estimation, ec, dateTimePicker1.Value, Convert.ToInt32(CardNum.Text), null);
                     RrDb db = new RrDb();
                     db.Add(row);
 

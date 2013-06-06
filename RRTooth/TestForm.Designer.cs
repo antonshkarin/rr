@@ -30,6 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.wizardControl1 = new AeroWizard.WizardControl();
+            this.wizardPage1 = new AeroWizard.WizardPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CardNum = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxSecondName = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.wizardPageHygieneIndex = new AeroWizard.WizardPage();
             this.textBoxHygieneIndex = new System.Windows.Forms.TextBox();
             this.labelHygieneIndex = new System.Windows.Forms.Label();
@@ -68,19 +82,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelMethod = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.labelSecondName = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.labelLastName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.labelFirstName = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.textBoxSecondName = new System.Windows.Forms.TextBox();
-            this.textBoxLastName = new System.Windows.Forms.TextBox();
-            this.textBoxFirstName = new System.Windows.Forms.TextBox();
-            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
+            this.wizardPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.wizardPageHygieneIndex.SuspendLayout();
             this.wizardPageToothColor.SuspendLayout();
             this.wizardPageFissure.SuspendLayout();
@@ -92,16 +96,16 @@
             this.wizardPageProfessionalHarmfulness.SuspendLayout();
             this.wizardPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // wizardControl1
             // 
             this.wizardControl1.CancelButtonText = "&Отмена";
-            this.wizardControl1.FinishButtonText = "&Завершить";
+            this.wizardControl1.FinishButtonText = "&Сохранить";
             this.wizardControl1.Location = new System.Drawing.Point(0, 0);
             this.wizardControl1.Name = "wizardControl1";
             this.wizardControl1.NextButtonText = "&Далее";
+            this.wizardControl1.Pages.Add(this.wizardPage1);
             this.wizardControl1.Pages.Add(this.wizardPageHygieneIndex);
             this.wizardControl1.Pages.Add(this.wizardPageToothColor);
             this.wizardControl1.Pages.Add(this.wizardPageFissure);
@@ -117,6 +121,132 @@
             this.wizardControl1.Title = "RR-Tooth";
             this.wizardControl1.TitleIcon = ((System.Drawing.Icon)(resources.GetObject("wizardControl1.TitleIcon")));
             this.wizardControl1.SelectedPageChanged += new System.EventHandler(this.wizardControl1_SelectedPageChanged);
+            // 
+            // wizardPage1
+            // 
+            this.wizardPage1.Controls.Add(this.groupBox2);
+            this.wizardPage1.Name = "wizardPage1";
+            this.wizardPage1.Size = new System.Drawing.Size(557, 304);
+            this.wizardPage1.TabIndex = 11;
+            this.wizardPage1.Text = "Данные о пациенте";
+            this.wizardPage1.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage1_Commit);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dateTimePicker3);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.CardNum);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textBoxSecondName);
+            this.groupBox2.Controls.Add(this.textBoxLastName);
+            this.groupBox2.Controls.Add(this.textBoxFirstName);
+            this.groupBox2.Location = new System.Drawing.Point(28, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(285, 205);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Введите данные";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(104, 167);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(167, 23);
+            this.dateTimePicker3.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 170);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 15);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Дата";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(104, 109);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(167, 23);
+            this.dateTimePicker1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Отчество:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "№ карты:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Фамилия:";
+            // 
+            // CardNum
+            // 
+            this.CardNum.Location = new System.Drawing.Point(104, 138);
+            this.CardNum.Name = "CardNum";
+            this.CardNum.Size = new System.Drawing.Size(167, 23);
+            this.CardNum.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Имя:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 112);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 15);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Дата рождения:";
+            // 
+            // textBoxSecondName
+            // 
+            this.textBoxSecondName.Location = new System.Drawing.Point(104, 80);
+            this.textBoxSecondName.Name = "textBoxSecondName";
+            this.textBoxSecondName.Size = new System.Drawing.Size(167, 23);
+            this.textBoxSecondName.TabIndex = 4;
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Location = new System.Drawing.Point(104, 22);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(167, 23);
+            this.textBoxLastName.TabIndex = 2;
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Location = new System.Drawing.Point(104, 51);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(167, 23);
+            this.textBoxFirstName.TabIndex = 3;
             // 
             // wizardPageHygieneIndex
             // 
@@ -489,7 +619,6 @@
             this.wizardPage10.Controls.Add(this.pictureBox1);
             this.wizardPage10.Controls.Add(this.labelMethod);
             this.wizardPage10.Controls.Add(this.label14);
-            this.wizardPage10.Controls.Add(this.groupBox1);
             this.wizardPage10.Name = "wizardPage10";
             this.wizardPage10.Size = new System.Drawing.Size(557, 304);
             this.wizardPage10.TabIndex = 10;
@@ -499,9 +628,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(334, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 210);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 198);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -526,116 +655,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Рекомендуемый метод лечения:";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.labelSecondName);
-            this.groupBox1.Controls.Add(this.label47);
-            this.groupBox1.Controls.Add(this.labelLastName);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.labelFirstName);
-            this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.textBoxSecondName);
-            this.groupBox1.Controls.Add(this.textBoxLastName);
-            this.groupBox1.Controls.Add(this.textBoxFirstName);
-            this.groupBox1.Controls.Add(this.buttonSave);
-            this.groupBox1.Location = new System.Drawing.Point(27, 76);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(285, 210);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Сохранение результата";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(104, 109);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(167, 23);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
-            // labelSecondName
-            // 
-            this.labelSecondName.AutoSize = true;
-            this.labelSecondName.Location = new System.Drawing.Point(10, 83);
-            this.labelSecondName.Name = "labelSecondName";
-            this.labelSecondName.Size = new System.Drawing.Size(61, 15);
-            this.labelSecondName.TabIndex = 7;
-            this.labelSecondName.Text = "Отчество:";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(9, 141);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(59, 15);
-            this.label47.TabIndex = 22;
-            this.label47.Text = "№ карты:";
-            // 
-            // labelLastName
-            // 
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(10, 25);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(61, 15);
-            this.labelLastName.TabIndex = 6;
-            this.labelLastName.Text = "Фамилия:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(104, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 23);
-            this.textBox2.TabIndex = 21;
-            // 
-            // labelFirstName
-            // 
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(10, 54);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(34, 15);
-            this.labelFirstName.TabIndex = 5;
-            this.labelFirstName.Text = "Имя:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(10, 112);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(93, 15);
-            this.label42.TabIndex = 20;
-            this.label42.Text = "Дата рождения:";
-            // 
-            // textBoxSecondName
-            // 
-            this.textBoxSecondName.Location = new System.Drawing.Point(104, 80);
-            this.textBoxSecondName.Name = "textBoxSecondName";
-            this.textBoxSecondName.Size = new System.Drawing.Size(167, 23);
-            this.textBoxSecondName.TabIndex = 4;
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Location = new System.Drawing.Point(104, 22);
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(167, 23);
-            this.textBoxLastName.TabIndex = 2;
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(104, 51);
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(167, 23);
-            this.textBoxFirstName.TabIndex = 3;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Location = new System.Drawing.Point(104, 171);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(167, 23);
-            this.buttonSave.TabIndex = 5;
-            this.buttonSave.Text = "Сохранить в базу данных";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,6 +665,9 @@
             this.Name = "TestForm";
             this.Text = "Выбор метода лечения";
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).EndInit();
+            this.wizardPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.wizardPageHygieneIndex.ResumeLayout(false);
             this.wizardPageHygieneIndex.PerformLayout();
             this.wizardPageToothColor.ResumeLayout(false);
@@ -667,8 +689,6 @@
             this.wizardPage10.ResumeLayout(false);
             this.wizardPage10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -709,22 +729,24 @@
         private AeroWizard.WizardPage wizardPage10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label labelMethod;
-        private System.Windows.Forms.TextBox textBoxSecondName;
-        private System.Windows.Forms.TextBox textBoxLastName;
-        private System.Windows.Forms.TextBox textBoxFirstName;
-        private System.Windows.Forms.Label labelSecondName;
-        private System.Windows.Forms.Label labelLastName;
-        private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label labelToothColorInstrumental;
         private System.Windows.Forms.ComboBox comboBoxToothColorVisual;
         private System.Windows.Forms.ComboBox comboBoxToothColorInstrumental;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxResistanceEname;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private AeroWizard.WizardPage wizardPage1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox CardNum;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxSecondName;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label6;
     }
 }
