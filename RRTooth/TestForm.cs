@@ -315,7 +315,7 @@ namespace RRTooth
 
         private void wizardPage1_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
         {
-            if (this.textBoxLastName.Text.Length == 0 || this.textBoxFirstName.Text.Length == 0 || this.textBoxSecondName.Text.Length == 0)
+            if (this.textBoxLastName.Text.Length == 0 || this.textBoxFirstName.Text.Length == 0 || this.textBoxSecondName.Text.Length == 0 || this.textBoxCardNumber.Text.Length == 0)
             {
                 MessageBox.Show("Не заполнены обязательные поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;

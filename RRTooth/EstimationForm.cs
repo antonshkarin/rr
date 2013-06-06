@@ -48,20 +48,20 @@ namespace RRTooth
             };
             try
             {
-                if (this.textBoxFirstName.Text.Length > 0 && this.textBoxSecondName.Text.Length > 0 && this.textBoxLastName.Text.Length > 0)
+                if (this.textBoxLastName.Text.Length == 0 || this.textBoxFirstName.Text.Length == 0 || this.textBoxSecondName.Text.Length == 0 || this.textBoxCardNumber.Text.Length == 0)
+                {
+                    MessageBox.Show("Не заполнены обязательные поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
                 {
                     var row = rr_history.Create<EstimationCard>(this.textBoxFirstName.Text,
                         this.textBoxSecondName.Text, this.textBoxLastName.Text,
-                        DateTime.Now, rr_history.RowType.Estimation, ec, dateTimePicker1.Value, CardNum.Text, null);
+                        dateTimeCreating.Value, rr_history.RowType.Estimation, ec, dateTimeBirthday.Value, textBoxCardNumber.Text, null);
                     RrDb db = new RrDb();
                     db.Add(row);
 
                     MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Необходимо ввести Ф.И.О. пациента", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

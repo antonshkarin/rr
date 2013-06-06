@@ -191,10 +191,13 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeBirthday = new System.Windows.Forms.DateTimePicker();
             this.label47 = new System.Windows.Forms.Label();
-            this.CardNum = new System.Windows.Forms.TextBox();
+            this.textBoxCardNumber = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.dateTimeCreating = new System.Windows.Forms.DateTimePicker();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
@@ -217,6 +220,7 @@
             this.groupBox19.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox21.SuspendLayout();
+            this.groupBox22.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -299,7 +303,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox19, 2, 23);
             this.tableLayoutPanel1.Controls.Add(this.groupBox20, 2, 24);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 238);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 25;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
@@ -1972,7 +1976,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(114, 176);
+            this.button1.Location = new System.Drawing.Point(85, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -1982,7 +1986,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(201, 176);
+            this.button2.Location = new System.Drawing.Point(3, 10);
             this.button2.Margin = new System.Windows.Forms.Padding(30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -2002,7 +2006,7 @@
             // labelSecondName
             // 
             this.labelSecondName.AutoSize = true;
-            this.labelSecondName.Location = new System.Drawing.Point(20, 85);
+            this.labelSecondName.Location = new System.Drawing.Point(20, 84);
             this.labelSecondName.Name = "labelSecondName";
             this.labelSecondName.Size = new System.Drawing.Size(57, 13);
             this.labelSecondName.TabIndex = 14;
@@ -2020,7 +2024,7 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(20, 56);
+            this.labelFirstName.Location = new System.Drawing.Point(20, 55);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(32, 13);
             this.labelFirstName.TabIndex = 12;
@@ -2049,56 +2053,82 @@
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.dateTimePicker1);
+            this.groupBox21.Controls.Add(this.dateTimeCreating);
+            this.groupBox21.Controls.Add(this.label48);
+            this.groupBox21.Controls.Add(this.dateTimeBirthday);
             this.groupBox21.Controls.Add(this.label47);
-            this.groupBox21.Controls.Add(this.CardNum);
+            this.groupBox21.Controls.Add(this.textBoxCardNumber);
             this.groupBox21.Controls.Add(this.label42);
-            this.groupBox21.Controls.Add(this.button1);
             this.groupBox21.Controls.Add(this.labelSecondName);
-            this.groupBox21.Controls.Add(this.button2);
             this.groupBox21.Controls.Add(this.textBoxFirstName);
             this.groupBox21.Controls.Add(this.textBoxLastName);
             this.groupBox21.Controls.Add(this.labelLastName);
             this.groupBox21.Controls.Add(this.textBoxSecondName);
             this.groupBox21.Controls.Add(this.labelFirstName);
-            this.groupBox21.Location = new System.Drawing.Point(12, 901);
+            this.groupBox21.Location = new System.Drawing.Point(19, 12);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(643, 211);
+            this.groupBox21.Size = new System.Drawing.Size(324, 220);
             this.groupBox21.TabIndex = 15;
             this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Сохранение данных";
+            this.groupBox21.Text = "Информация о пациенте";
             // 
-            // dateTimePicker1
+            // dateTimeBirthday
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 109);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dateTimeBirthday.Location = new System.Drawing.Point(114, 110);
+            this.dateTimeBirthday.Name = "dateTimeBirthday";
+            this.dateTimeBirthday.Size = new System.Drawing.Size(189, 20);
+            this.dateTimeBirthday.TabIndex = 19;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(20, 143);
+            this.label47.Location = new System.Drawing.Point(20, 142);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(55, 13);
             this.label47.TabIndex = 18;
             this.label47.Text = "№ карты:";
             // 
-            // CardNum
+            // textBoxCardNumber
             // 
-            this.CardNum.Location = new System.Drawing.Point(114, 139);
-            this.CardNum.Name = "CardNum";
-            this.CardNum.Size = new System.Drawing.Size(189, 20);
-            this.CardNum.TabIndex = 17;
+            this.textBoxCardNumber.Location = new System.Drawing.Point(114, 139);
+            this.textBoxCardNumber.Name = "textBoxCardNumber";
+            this.textBoxCardNumber.Size = new System.Drawing.Size(189, 20);
+            this.textBoxCardNumber.TabIndex = 17;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(20, 114);
+            this.label42.Location = new System.Drawing.Point(20, 113);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(89, 13);
             this.label42.TabIndex = 16;
             this.label42.Text = "Дата рождения:";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(20, 171);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(36, 13);
+            this.label48.TabIndex = 20;
+            this.label48.Text = "Дата:";
+            // 
+            // dateTimeCreating
+            // 
+            this.dateTimeCreating.Location = new System.Drawing.Point(114, 168);
+            this.dateTimeCreating.Name = "dateTimeCreating";
+            this.dateTimeCreating.Size = new System.Drawing.Size(189, 20);
+            this.dateTimeCreating.TabIndex = 21;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.button1);
+            this.groupBox22.Controls.Add(this.button2);
+            this.groupBox22.Location = new System.Drawing.Point(496, 1121);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(166, 39);
+            this.groupBox22.TabIndex = 16;
+            this.groupBox22.TabStop = false;
             // 
             // EstimationForm
             // 
@@ -2106,7 +2136,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(782, 500);
+            this.ClientSize = new System.Drawing.Size(693, 500);
+            this.Controls.Add(this.groupBox22);
             this.Controls.Add(this.groupBox21);
             this.Controls.Add(this.label62);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -2158,6 +2189,7 @@
             this.groupBox20.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2328,9 +2360,12 @@
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox CardNum;
+        private System.Windows.Forms.TextBox textBoxCardNumber;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimeBirthday;
+        private System.Windows.Forms.DateTimePicker dateTimeCreating;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.GroupBox groupBox22;
 
     }
 }
