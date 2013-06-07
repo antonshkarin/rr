@@ -28,6 +28,9 @@ namespace RRTooth
         public Form1()
         {
             InitializeComponent();
+            this.MouseDoubleClick += Form1_DoubleClick;
+            //this.MaximumSize = this.MinimumSize = this.Size;
+            //this.SizeChanged += Form1_DoubleClick;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -89,9 +92,19 @@ namespace RRTooth
 
         }
 
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
         private void closeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

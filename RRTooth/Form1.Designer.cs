@@ -37,20 +37,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.closeLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::RRTooth.Properties.Resources.rr_diagnostics;
-            this.pictureBox1.Location = new System.Drawing.Point(311, 315);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 382);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 65);
             this.pictureBox1.TabIndex = 4;
@@ -61,7 +64,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::RRTooth.Properties.Resources.rr_evaluation;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 315);
+            this.pictureBox2.Location = new System.Drawing.Point(367, 382);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 65);
             this.pictureBox2.TabIndex = 5;
@@ -72,7 +75,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::RRTooth.Properties.Resources.rr_history;
-            this.pictureBox3.Location = new System.Drawing.Point(160, 315);
+            this.pictureBox3.Location = new System.Drawing.Point(47, 382);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 65);
             this.pictureBox3.TabIndex = 6;
@@ -81,25 +84,26 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(126, 9);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 32);
+            this.label1.Size = new System.Drawing.Size(448, 32);
             this.label1.TabIndex = 7;
             this.label1.Text = "RR-Tooth";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(97, 41);
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Location = new System.Drawing.Point(12, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 16);
+            this.label2.Size = new System.Drawing.Size(448, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "(The Registar tooth restoration)";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -128,36 +132,24 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Выбор метода";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabel1.Location = new System.Drawing.Point(23, 381);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(45, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Оценка";
-            // 
             // linkLabel2
             // 
-            this.linkLabel2.AutoSize = true;
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabel2.Location = new System.Drawing.Point(166, 381);
+            this.linkLabel2.Location = new System.Drawing.Point(47, 450);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(50, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(65, 33);
             this.linkLabel2.TabIndex = 10;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "История";
+            this.linkLabel2.Text = "МКСБ (вкладыш)";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabel3.Location = new System.Drawing.Point(308, 381);
+            this.linkLabel3.Location = new System.Drawing.Point(152, 450);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(74, 13);
             this.linkLabel3.TabIndex = 11;
@@ -169,7 +161,7 @@
             this.closeLinkLabel.ActiveLinkColor = System.Drawing.Color.Maroon;
             this.closeLinkLabel.AutoSize = true;
             this.closeLinkLabel.LinkColor = System.Drawing.Color.Maroon;
-            this.closeLinkLabel.Location = new System.Drawing.Point(331, 9);
+            this.closeLinkLabel.Location = new System.Drawing.Point(409, 9);
             this.closeLinkLabel.Name = "closeLinkLabel";
             this.closeLinkLabel.Size = new System.Drawing.Size(51, 13);
             this.closeLinkLabel.TabIndex = 12;
@@ -178,18 +170,54 @@
             this.closeLinkLabel.VisitedLinkColor = System.Drawing.Color.Maroon;
             this.closeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.closeLinkLabel_LinkClicked);
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel4.LinkColor = System.Drawing.Color.Maroon;
+            this.linkLabel4.Location = new System.Drawing.Point(262, 450);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(65, 33);
+            this.linkLabel4.TabIndex = 14;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Метод лечения";
+            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::RRTooth.Properties.Resources.rr_method;
+            this.pictureBox4.Location = new System.Drawing.Point(262, 382);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel5.LinkColor = System.Drawing.Color.Maroon;
+            this.linkLabel5.Location = new System.Drawing.Point(350, 450);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(99, 33);
+            this.linkLabel5.TabIndex = 16;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Оценка качества реставрации";
+            this.linkLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.BackgroundImage = global::RRTooth.Properties.Resources.Tooth;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(388, 396);
+            this.BackgroundImage = global::RRTooth.Properties.Resources.Tooth_mini;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(472, 484);
+            this.Controls.Add(this.linkLabel5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.closeLinkLabel);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -197,12 +225,14 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "RrTooth";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,10 +248,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel closeLinkLabel;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel linkLabel5;
     }
 }
 
