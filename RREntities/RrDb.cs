@@ -15,7 +15,7 @@ namespace RREntities
         {
             String connStr = String.Format(
                 "metadata=res://*/RrHistory.csdl|res://*/RrHistory.ssdl|res://*/RrHistory.msl;provider=System.Data.SQLite;provider connection string='{0}'",
-                ConfigurationManager.ConnectionStrings["rr_dbEntities"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["rr_dbEntities1"].ConnectionString);
             return connStr;
         }
 

@@ -45,7 +45,7 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.wizardPageHygieneIndex = new AeroWizard.WizardPage();
-            this.textBoxHygieneIndex = new System.Windows.Forms.TextBox();
+            this.comboBoxHygieneIndex = new System.Windows.Forms.ComboBox();
             this.labelHygieneIndex = new System.Windows.Forms.Label();
             this.labelDescHygieneIndex = new System.Windows.Forms.Label();
             this.wizardPageToothColor = new AeroWizard.WizardPage();
@@ -58,10 +58,10 @@
             this.labelDescFissure = new System.Windows.Forms.Label();
             this.labelFissure = new System.Windows.Forms.Label();
             this.comboBoxFissure = new System.Windows.Forms.ComboBox();
-            this.wizardPageResistanceEname = new AeroWizard.WizardPage();
-            this.textBoxResistanceEname = new System.Windows.Forms.TextBox();
-            this.labelDescResistanceEname = new System.Windows.Forms.Label();
-            this.labelResistanceEname = new System.Windows.Forms.Label();
+            this.wizardPageResistanceEnamel = new AeroWizard.WizardPage();
+            this.comboBoxResistanceEnamel = new System.Windows.Forms.ComboBox();
+            this.labelDescResistanceEnamel = new System.Windows.Forms.Label();
+            this.labelResistanceEnamel = new System.Windows.Forms.Label();
             this.wizardPageToothCrownDestruction = new AeroWizard.WizardPage();
             this.labelDescToothCrownDestruction = new System.Windows.Forms.Label();
             this.comboBoxToothCrownDestruction = new System.Windows.Forms.ComboBox();
@@ -88,7 +88,7 @@
             this.wizardPageHygieneIndex.SuspendLayout();
             this.wizardPageToothColor.SuspendLayout();
             this.wizardPageFissure.SuspendLayout();
-            this.wizardPageResistanceEname.SuspendLayout();
+            this.wizardPageResistanceEnamel.SuspendLayout();
             this.wizardPageToothCrownDestruction.SuspendLayout();
             this.wizardPageBite.SuspendLayout();
             this.wizardPagePeriodontalDisease.SuspendLayout();
@@ -109,7 +109,7 @@
             this.wizardControl1.Pages.Add(this.wizardPageHygieneIndex);
             this.wizardControl1.Pages.Add(this.wizardPageToothColor);
             this.wizardControl1.Pages.Add(this.wizardPageFissure);
-            this.wizardControl1.Pages.Add(this.wizardPageResistanceEname);
+            this.wizardControl1.Pages.Add(this.wizardPageResistanceEnamel);
             this.wizardControl1.Pages.Add(this.wizardPageToothCrownDestruction);
             this.wizardControl1.Pages.Add(this.wizardPageBite);
             this.wizardControl1.Pages.Add(this.wizardPagePeriodontalDisease);
@@ -250,7 +250,7 @@
             // 
             // wizardPageHygieneIndex
             // 
-            this.wizardPageHygieneIndex.Controls.Add(this.textBoxHygieneIndex);
+            this.wizardPageHygieneIndex.Controls.Add(this.comboBoxHygieneIndex);
             this.wizardPageHygieneIndex.Controls.Add(this.labelHygieneIndex);
             this.wizardPageHygieneIndex.Controls.Add(this.labelDescHygieneIndex);
             this.wizardPageHygieneIndex.Name = "wizardPageHygieneIndex";
@@ -260,12 +260,18 @@
             this.wizardPageHygieneIndex.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageHygieneIndex_Commit);
             this.wizardPageHygieneIndex.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPageHygieneIndex_Initialize);
             // 
-            // textBoxHygieneIndex
+            // comboBoxHygieneIndex
             // 
-            this.textBoxHygieneIndex.Location = new System.Drawing.Point(33, 38);
-            this.textBoxHygieneIndex.Name = "textBoxHygieneIndex";
-            this.textBoxHygieneIndex.Size = new System.Drawing.Size(140, 23);
-            this.textBoxHygieneIndex.TabIndex = 2;
+            this.comboBoxHygieneIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHygieneIndex.FormattingEnabled = true;
+            this.comboBoxHygieneIndex.Items.AddRange(new object[] {
+            "0 - 1,2",
+            "1,3 - 3,0",
+            "3,1 - 6,0"});
+            this.comboBoxHygieneIndex.Location = new System.Drawing.Point(33, 39);
+            this.comboBoxHygieneIndex.Name = "comboBoxHygieneIndex";
+            this.comboBoxHygieneIndex.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxHygieneIndex.TabIndex = 2;
             // 
             // labelHygieneIndex
             // 
@@ -400,43 +406,49 @@
             this.comboBoxFissure.Size = new System.Drawing.Size(121, 23);
             this.comboBoxFissure.TabIndex = 0;
             // 
-            // wizardPageResistanceEname
+            // wizardPageResistanceEnamel
             // 
-            this.wizardPageResistanceEname.Controls.Add(this.textBoxResistanceEname);
-            this.wizardPageResistanceEname.Controls.Add(this.labelDescResistanceEname);
-            this.wizardPageResistanceEname.Controls.Add(this.labelResistanceEname);
-            this.wizardPageResistanceEname.Name = "wizardPageResistanceEname";
-            this.wizardPageResistanceEname.Size = new System.Drawing.Size(557, 304);
-            this.wizardPageResistanceEname.TabIndex = 3;
-            this.wizardPageResistanceEname.Text = "Уровень резистентности эмали";
-            this.wizardPageResistanceEname.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageResistanceEname_Commit);
-            this.wizardPageResistanceEname.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPageResistanceEname_Initialize);
+            this.wizardPageResistanceEnamel.Controls.Add(this.comboBoxResistanceEnamel);
+            this.wizardPageResistanceEnamel.Controls.Add(this.labelDescResistanceEnamel);
+            this.wizardPageResistanceEnamel.Controls.Add(this.labelResistanceEnamel);
+            this.wizardPageResistanceEnamel.Name = "wizardPageResistanceEnamel";
+            this.wizardPageResistanceEnamel.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageResistanceEnamel.TabIndex = 3;
+            this.wizardPageResistanceEnamel.Text = "Уровень резистентности эмали";
+            this.wizardPageResistanceEnamel.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageResistanceEnamel_Commit);
+            this.wizardPageResistanceEnamel.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPageResistanceEname_Initialize);
             // 
-            // textBoxResistanceEname
+            // comboBoxResistanceEnamel
             // 
-            this.textBoxResistanceEname.Location = new System.Drawing.Point(33, 38);
-            this.textBoxResistanceEname.Name = "textBoxResistanceEname";
-            this.textBoxResistanceEname.Size = new System.Drawing.Size(121, 23);
-            this.textBoxResistanceEname.TabIndex = 3;
+            this.comboBoxResistanceEnamel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxResistanceEnamel.FormattingEnabled = true;
+            this.comboBoxResistanceEnamel.Items.AddRange(new object[] {
+            "10 - 40%",
+            "41 - 60%",
+            "> 60%"});
+            this.comboBoxResistanceEnamel.Location = new System.Drawing.Point(33, 39);
+            this.comboBoxResistanceEnamel.Name = "comboBoxResistanceEnamel";
+            this.comboBoxResistanceEnamel.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxResistanceEnamel.TabIndex = 3;
             // 
-            // labelDescResistanceEname
+            // labelDescResistanceEnamel
             // 
-            this.labelDescResistanceEname.AutoSize = true;
-            this.labelDescResistanceEname.Location = new System.Drawing.Point(30, 80);
-            this.labelDescResistanceEname.MaximumSize = new System.Drawing.Size(500, 0);
-            this.labelDescResistanceEname.Name = "labelDescResistanceEname";
-            this.labelDescResistanceEname.Size = new System.Drawing.Size(62, 15);
-            this.labelDescResistanceEname.TabIndex = 2;
-            this.labelDescResistanceEname.Text = "Описание";
+            this.labelDescResistanceEnamel.AutoSize = true;
+            this.labelDescResistanceEnamel.Location = new System.Drawing.Point(30, 80);
+            this.labelDescResistanceEnamel.MaximumSize = new System.Drawing.Size(500, 0);
+            this.labelDescResistanceEnamel.Name = "labelDescResistanceEnamel";
+            this.labelDescResistanceEnamel.Size = new System.Drawing.Size(62, 15);
+            this.labelDescResistanceEnamel.TabIndex = 2;
+            this.labelDescResistanceEnamel.Text = "Описание";
             // 
-            // labelResistanceEname
+            // labelResistanceEnamel
             // 
-            this.labelResistanceEname.AutoSize = true;
-            this.labelResistanceEname.Location = new System.Drawing.Point(30, 20);
-            this.labelResistanceEname.Name = "labelResistanceEname";
-            this.labelResistanceEname.Size = new System.Drawing.Size(228, 15);
-            this.labelResistanceEname.TabIndex = 0;
-            this.labelResistanceEname.Text = "Введите уровень резистентности эмали:";
+            this.labelResistanceEnamel.AutoSize = true;
+            this.labelResistanceEnamel.Location = new System.Drawing.Point(30, 20);
+            this.labelResistanceEnamel.Name = "labelResistanceEnamel";
+            this.labelResistanceEnamel.Size = new System.Drawing.Size(228, 15);
+            this.labelResistanceEnamel.TabIndex = 0;
+            this.labelResistanceEnamel.Text = "Введите уровень резистентности эмали:";
             // 
             // wizardPageToothCrownDestruction
             // 
@@ -674,8 +686,8 @@
             this.wizardPageToothColor.PerformLayout();
             this.wizardPageFissure.ResumeLayout(false);
             this.wizardPageFissure.PerformLayout();
-            this.wizardPageResistanceEname.ResumeLayout(false);
-            this.wizardPageResistanceEname.PerformLayout();
+            this.wizardPageResistanceEnamel.ResumeLayout(false);
+            this.wizardPageResistanceEnamel.PerformLayout();
             this.wizardPageToothCrownDestruction.ResumeLayout(false);
             this.wizardPageToothCrownDestruction.PerformLayout();
             this.wizardPageBite.ResumeLayout(false);
@@ -699,11 +711,10 @@
         private AeroWizard.WizardPage wizardPageHygieneIndex;
         private System.Windows.Forms.Label labelDescHygieneIndex;
         private System.Windows.Forms.Label labelHygieneIndex;
-        private System.Windows.Forms.TextBox textBoxHygieneIndex;
         private AeroWizard.WizardPage wizardPageToothColor;
         private System.Windows.Forms.Label labelDescToothColor;
         private System.Windows.Forms.Label labelToothColorVisual;
-        private AeroWizard.WizardPage wizardPageResistanceEname;
+        private AeroWizard.WizardPage wizardPageResistanceEnamel;
         private AeroWizard.WizardPage wizardPageToothCrownDestruction;
         private AeroWizard.WizardPage wizardPageBite;
         private AeroWizard.WizardPage wizardPagePeriodontalDisease;
@@ -713,8 +724,8 @@
         private System.Windows.Forms.Label labelDescFissure;
         private System.Windows.Forms.Label labelFissure;
         private System.Windows.Forms.ComboBox comboBoxFissure;
-        private System.Windows.Forms.Label labelDescResistanceEname;
-        private System.Windows.Forms.Label labelResistanceEname;
+        private System.Windows.Forms.Label labelDescResistanceEnamel;
+        private System.Windows.Forms.Label labelResistanceEnamel;
         private System.Windows.Forms.Label labelDescToothCrownDestruction;
         private System.Windows.Forms.ComboBox comboBoxToothCrownDestruction;
         private System.Windows.Forms.Label labelToothCrownDestruction;
@@ -732,7 +743,6 @@
         private System.Windows.Forms.Label labelToothColorInstrumental;
         private System.Windows.Forms.ComboBox comboBoxToothColorVisual;
         private System.Windows.Forms.ComboBox comboBoxToothColorInstrumental;
-        private System.Windows.Forms.TextBox textBoxResistanceEname;
         private System.Windows.Forms.PictureBox pictureBox1;
         private AeroWizard.WizardPage wizardPage1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -748,5 +758,7 @@
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.DateTimePicker dateTimeCreating;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxHygieneIndex;
+        private System.Windows.Forms.ComboBox comboBoxResistanceEnamel;
     }
 }

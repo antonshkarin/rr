@@ -24,6 +24,18 @@ namespace RRTooth
         {
             InitializeComponent();
             diagnosticCard = new DiagnosticCard();
+
+            comboBoxToothColorVisual.SelectedIndex = 0;
+            comboBoxToothColorInstrumental.SelectedIndex = 0;
+            comboBoxBadHabits.SelectedIndex = 0;
+            comboBoxFissure.SelectedIndex = 0;
+            comboBoxResistanceEnamel.SelectedIndex = 0;
+            comboBoxToothCrownDestruction.SelectedIndex = 0;
+            comboBoxBite.SelectedIndex = 0;
+            comboBoxPeriodontalDisease.SelectedIndex = 0;
+            comboBoxBadHabits.SelectedIndex = 0;
+            comboBoxHygieneIndex.SelectedIndex = 0;
+            comboBoxProfessionalHarmfulness.SelectedIndex = 0;
         }
 
         private void wizardControl1_SelectedPageChanged(object sender, EventArgs e)
@@ -34,8 +46,6 @@ namespace RRTooth
         private void wizardPage2_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelDescToothColor.Text = Properties.Resources.DescToothColor;
-            comboBoxToothColorVisual.SelectedIndex = 0;
-            comboBoxToothColorInstrumental.SelectedIndex = 0;
         }
 
         private void wizardPageHygieneIndex_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
@@ -46,23 +56,34 @@ namespace RRTooth
         private void wizardPageFissure_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelDescFissure.Text = Properties.Resources.DescFissure;
-            comboBoxFissure.SelectedIndex = 0;
         }
 
         private void wizardPageResistanceEname_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
-            labelDescResistanceEname.Text = Properties.Resources.DescResistanceEname;
-            //comboBoxResistanceEname.SelectedIndex = 0;
+            labelDescResistanceEnamel.Text = Properties.Resources.DescResistanceEnamel;
         }
 
         private void wizardPageToothCrownDestruction_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
             labelDescToothCrownDestruction.Text = Properties.Resources.DescToothCrownDestruction;
-            comboBoxToothCrownDestruction.SelectedIndex = 0;
         }
 
         private void wizardPageHygieneIndex_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
         {
+            //TODO: нужен enum
+            switch (comboBoxHygieneIndex.SelectedIndex)
+            {
+                case 0:
+                    diagnosticCard.HygieneIndex = 0.5;
+                    break;
+                case 1:
+                    diagnosticCard.HygieneIndex = 1.5;
+                    break;
+                case 2:
+                    diagnosticCard.HygieneIndex = 3.5;
+                    break;
+            }
+            /*
             try
             {
 
@@ -88,21 +109,19 @@ namespace RRTooth
                 e.Cancel = true;
                 return;
             }
+             */
         }
 
         private void wizardPageBite_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
-            comboBoxBite.SelectedIndex = 0;
         }
 
         private void wizardPagePeriodontalDisease_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
-            comboBoxPeriodontalDisease.SelectedIndex = 0;
         }
 
         private void wizardPageBadHabits_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
-            comboBoxBadHabits.SelectedIndex = 0;
         }
 
         private void wizardPageFissure_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
@@ -121,31 +140,31 @@ namespace RRTooth
             }
         }
 
-        private void wizardPageResistanceEname_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
+        private void wizardPageResistanceEnamel_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
         {
-            /*switch (comboBoxResistanceEname.SelectedIndex)
+            switch (comboBoxResistanceEnamel.SelectedIndex)
             {
                 case 0:
-                    diagnosticCard.ResistanceEnamelLevel = 75;
+                    diagnosticCard.ResistanceEnamelLevel = 15;
                     break;
                 case 1:
                     diagnosticCard.ResistanceEnamelLevel = 35;
                     break;
                 case 2:
-                    diagnosticCard.ResistanceEnamelLevel = 15;
+                    diagnosticCard.ResistanceEnamelLevel = 75;
                     break;
-            }*/
-            try
+            }
+            /*try
             {
 
-                if (textBoxResistanceEname.Text.Length == 0)
+                if (textBoxResistanceEnamel.Text.Length == 0)
                 {
                     MessageBox.Show("Значение не должно быть пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     e.Cancel = true;
                     return;
                 }
 
-                int b = Convert.ToInt32(textBoxResistanceEname.Text);
+                int b = Convert.ToInt32(textBoxResistanceEnamel.Text);
                 if (b < 0 || b > 100)
                 {
                     MessageBox.Show("Значение должно быть в диапазоне от 0 до 100 процентов", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -159,7 +178,7 @@ namespace RRTooth
                 MessageBox.Show("Введено некорректное значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;
                 return;
-            }
+            }*/
         }
 
         private void wizardPageToothCrownDestruction_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
@@ -276,7 +295,7 @@ namespace RRTooth
 
         private void wizardPageProfessionalHarmfulness_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
-            comboBoxProfessionalHarmfulness.SelectedIndex = 0;
+            
         }
 
         private void labelToothColor_Click(object sender, EventArgs e)

@@ -84,9 +84,9 @@ namespace RRTooth.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Определение уровня резистетности эмали по методике Л.А. Аксамит, 1973г., методика заключается в витальном окрашивании протравленного участка эмали. Поверхность исследуемого зуба тщательно очищают от налета 3% раствором перекиси водорода, просушивают струей воздуха, далее на вестибулярную поверхность исследуемого зуба наносят полиэтиленовую липкую ленту в центре которой имеется округлое отверстие в диаметре 2,8 мм, затем в это «окно» наносят деминерализующий раствор на 30 секунд рН – 0,37 (кислотный буфер В. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string DescResistanceEname {
+        internal static string DescResistanceEnamel {
             get {
-                return ResourceManager.GetString("DescResistanceEname", resourceCulture);
+                return ResourceManager.GetString("DescResistanceEnamel", resourceCulture);
             }
         }
         
