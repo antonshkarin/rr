@@ -15,7 +15,7 @@ namespace RREntities
         {
             String connStr = String.Format(
                 "metadata=res://*/RrHistory.csdl|res://*/RrHistory.ssdl|res://*/RrHistory.msl;provider=System.Data.SQLite;provider connection string='{0}'",
-                ConfigurationManager.ConnectionStrings["rr_dbEntities1"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["rr_dbEntities"].ConnectionString);
             return connStr;
         }
 
@@ -264,7 +264,7 @@ namespace RREntities
             dbContext.SaveChanges();
         }
 
-        public List<rr_history> Find(String lastName, String firstName = "", String secondName = "")
+        public List<rr_history> Find(String lastName, String firstName = "", String secondName = "", int? type = null)
         {
             String whereClause = String.Empty;
             if (lastName != "")
@@ -273,6 +273,9 @@ namespace RREntities
                 whereClause += (whereClause.Length > 0 ? " and " : "") + " it.first_name = '" + firstName + "'";
             if (secondName != "")
                 whereClause += (whereClause.Length > 0 ? " and " : "") + " it.second_name = '" + secondName + "'";
+
+            if (type.HasValue)
+                whereClause += (whereClause.Length > 0 ? " and " : "") + " it.type = " + type.Value;
 
             var entries = dbContext.rr_history.Where(whereClause).OrderBy(x => x.last_name);
             return entries.ToList();
