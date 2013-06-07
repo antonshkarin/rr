@@ -25,6 +25,12 @@ namespace RREntities
         }
     }
 
+    public enum HygieneIndexType
+    {
+        val0_12,
+        val13_30,
+        val31_60
+    }
 
     public enum VizualToothColorType
     {
@@ -45,6 +51,13 @@ namespace RREntities
         Type1,
         Type2,
         Type3
+    }
+
+    public enum ResistanceEnamelLevelType
+    {
+        val10_40,
+        val41_60,
+        val60_100
     }
 
     public enum ToothCrownDestructionIndexType
@@ -85,11 +98,11 @@ namespace RREntities
     [Serializable]
     public class DiagnosticCard
     {
-        public double HygieneIndex { get; set; }
+        public HygieneIndexType HygieneIndex { get; set; }
         public VizualToothColorType VizualToothColor { get; set; }
         public InstrumentalToothColorType InstrumentalToothColor { get; set; }
         public FissureType PresenceOfFissures { get; set; }
-        public int ResistanceEnamelLevel { get; set; }
+        public ResistanceEnamelLevelType ResistanceEnamelLevel { get; set; }
         public ToothCrownDestructionIndexType ToothCrownDestructionIndex { get; set; }
         public BiteType Bite { get; set; }
         public PeriodontalDiseaseType PeriodontalDisease { get; set; }
@@ -100,11 +113,11 @@ namespace RREntities
         {
             int total = 0;
             
-            if (HygieneIndex <= 1.2)
+            if (HygieneIndex == HygieneIndexType.val0_12)
                 total += 2;
-            else if (HygieneIndex <= 3.0)
+            else if (HygieneIndex == HygieneIndexType.val13_30)
                 total += 3;
-            else if (HygieneIndex > 3.0)
+            else if (HygieneIndex == HygieneIndexType.val31_60)
                 total += 4;
 
             if (VizualToothColor == VizualToothColorType.Equal)
@@ -128,11 +141,11 @@ namespace RREntities
             else if (PresenceOfFissures == FissureType.Type3)
                 total += 4;
 
-            if (ResistanceEnamelLevel >= 71)
+            if (ResistanceEnamelLevel == ResistanceEnamelLevelType.val10_40)
                 total += 2;
-            else if (ResistanceEnamelLevel >= 30)
+            else if (ResistanceEnamelLevel == ResistanceEnamelLevelType.val41_60)
                 total += 3;
-            else if (ResistanceEnamelLevel >= 10)
+            else if (ResistanceEnamelLevel == ResistanceEnamelLevelType.val60_100)
                 total += 4;
 
             if (ToothCrownDestructionIndex == ToothCrownDestructionIndexType.Class5_30percents)

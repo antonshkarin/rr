@@ -67,15 +67,19 @@
             this.comboBoxToothCrownDestruction = new System.Windows.Forms.ComboBox();
             this.labelToothCrownDestruction = new System.Windows.Forms.Label();
             this.wizardPageBite = new AeroWizard.WizardPage();
+            this.labelDescBite = new System.Windows.Forms.Label();
             this.comboBoxBite = new System.Windows.Forms.ComboBox();
             this.labelBite = new System.Windows.Forms.Label();
             this.wizardPagePeriodontalDisease = new AeroWizard.WizardPage();
+            this.labelDescPeriodontalDisease = new System.Windows.Forms.Label();
             this.labelPeriodontalDisease = new System.Windows.Forms.Label();
             this.comboBoxPeriodontalDisease = new System.Windows.Forms.ComboBox();
             this.wizardPageBadHabits = new AeroWizard.WizardPage();
+            this.labelDescBadHabits = new System.Windows.Forms.Label();
             this.comboBoxBadHabits = new System.Windows.Forms.ComboBox();
             this.label1BadHabits = new System.Windows.Forms.Label();
             this.wizardPageProfessionalHarmfulness = new AeroWizard.WizardPage();
+            this.labelDescProfessionalHarmfulness = new System.Windows.Forms.Label();
             this.comboBoxProfessionalHarmfulness = new System.Windows.Forms.ComboBox();
             this.labelProfessionalHarmfulness = new System.Windows.Forms.Label();
             this.wizardPage10 = new AeroWizard.WizardPage();
@@ -116,7 +120,7 @@
             this.wizardControl1.Pages.Add(this.wizardPageBadHabits);
             this.wizardControl1.Pages.Add(this.wizardPageProfessionalHarmfulness);
             this.wizardControl1.Pages.Add(this.wizardPage10);
-            this.wizardControl1.Size = new System.Drawing.Size(604, 459);
+            this.wizardControl1.Size = new System.Drawing.Size(718, 682);
             this.wizardControl1.TabIndex = 0;
             this.wizardControl1.Title = "RR-Tooth";
             this.wizardControl1.TitleIcon = ((System.Drawing.Icon)(resources.GetObject("wizardControl1.TitleIcon")));
@@ -126,7 +130,7 @@
             // 
             this.wizardPage1.Controls.Add(this.groupBox2);
             this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(557, 304);
+            this.wizardPage1.Size = new System.Drawing.Size(671, 422);
             this.wizardPage1.TabIndex = 11;
             this.wizardPage1.Text = "Данные о пациенте";
             this.wizardPage1.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage1_Commit);
@@ -254,7 +258,7 @@
             this.wizardPageHygieneIndex.Controls.Add(this.labelHygieneIndex);
             this.wizardPageHygieneIndex.Controls.Add(this.labelDescHygieneIndex);
             this.wizardPageHygieneIndex.Name = "wizardPageHygieneIndex";
-            this.wizardPageHygieneIndex.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageHygieneIndex.Size = new System.Drawing.Size(671, 527);
             this.wizardPageHygieneIndex.TabIndex = 0;
             this.wizardPageHygieneIndex.Text = "Индекс гигиены";
             this.wizardPageHygieneIndex.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageHygieneIndex_Commit);
@@ -278,16 +282,16 @@
             this.labelHygieneIndex.AutoSize = true;
             this.labelHygieneIndex.Location = new System.Drawing.Point(30, 20);
             this.labelHygieneIndex.Name = "labelHygieneIndex";
-            this.labelHygieneIndex.Size = new System.Drawing.Size(143, 15);
+            this.labelHygieneIndex.Size = new System.Drawing.Size(97, 15);
             this.labelHygieneIndex.TabIndex = 1;
-            this.labelHygieneIndex.Text = "Введите индекс гигиены:";
+            this.labelHygieneIndex.Text = "Введите данные:";
             // 
             // labelDescHygieneIndex
             // 
             this.labelDescHygieneIndex.AutoSize = true;
             this.labelDescHygieneIndex.BackColor = System.Drawing.SystemColors.Window;
             this.labelDescHygieneIndex.Location = new System.Drawing.Point(30, 80);
-            this.labelDescHygieneIndex.MaximumSize = new System.Drawing.Size(500, 0);
+            this.labelDescHygieneIndex.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelDescHygieneIndex.Name = "labelDescHygieneIndex";
             this.labelDescHygieneIndex.Size = new System.Drawing.Size(62, 15);
             this.labelDescHygieneIndex.TabIndex = 0;
@@ -301,7 +305,7 @@
             this.wizardPageToothColor.Controls.Add(this.labelDescToothColor);
             this.wizardPageToothColor.Controls.Add(this.labelToothColorVisual);
             this.wizardPageToothColor.Name = "wizardPageToothColor";
-            this.wizardPageToothColor.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageToothColor.Size = new System.Drawing.Size(671, 481);
             this.wizardPageToothColor.TabIndex = 1;
             this.wizardPageToothColor.Text = "Цвет зуба";
             this.wizardPageToothColor.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageToothColor_Commit);
@@ -338,15 +342,15 @@
             this.labelToothColorInstrumental.AutoSize = true;
             this.labelToothColorInstrumental.Location = new System.Drawing.Point(30, 73);
             this.labelToothColorInstrumental.Name = "labelToothColorInstrumental";
-            this.labelToothColorInstrumental.Size = new System.Drawing.Size(128, 15);
+            this.labelToothColorInstrumental.Size = new System.Drawing.Size(219, 15);
             this.labelToothColorInstrumental.TabIndex = 3;
-            this.labelToothColorInstrumental.Text = "Аппаратурный метод:";
+            this.labelToothColorInstrumental.Text = "Введите данные, аппаратурный метод:";
             // 
             // labelDescToothColor
             // 
             this.labelDescToothColor.AutoSize = true;
             this.labelDescToothColor.Location = new System.Drawing.Point(30, 138);
-            this.labelDescToothColor.MaximumSize = new System.Drawing.Size(500, 0);
+            this.labelDescToothColor.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelDescToothColor.Name = "labelDescToothColor";
             this.labelDescToothColor.Size = new System.Drawing.Size(62, 15);
             this.labelDescToothColor.TabIndex = 1;
@@ -357,9 +361,9 @@
             this.labelToothColorVisual.AutoSize = true;
             this.labelToothColorVisual.Location = new System.Drawing.Point(30, 20);
             this.labelToothColorVisual.Name = "labelToothColorVisual";
-            this.labelToothColorVisual.Size = new System.Drawing.Size(113, 15);
+            this.labelToothColorVisual.Size = new System.Drawing.Size(205, 15);
             this.labelToothColorVisual.TabIndex = 0;
-            this.labelToothColorVisual.Text = "Визуальный метод:";
+            this.labelToothColorVisual.Text = "Введите данные, визуальный метод:";
             this.labelToothColorVisual.Click += new System.EventHandler(this.labelToothColor_Click);
             // 
             // wizardPageFissure
@@ -368,7 +372,7 @@
             this.wizardPageFissure.Controls.Add(this.labelFissure);
             this.wizardPageFissure.Controls.Add(this.comboBoxFissure);
             this.wizardPageFissure.Name = "wizardPageFissure";
-            this.wizardPageFissure.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageFissure.Size = new System.Drawing.Size(671, 481);
             this.wizardPageFissure.TabIndex = 9;
             this.wizardPageFissure.Text = "Наличие трещин";
             this.wizardPageFissure.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageFissure_Commit);
@@ -378,7 +382,7 @@
             // 
             this.labelDescFissure.AutoSize = true;
             this.labelDescFissure.Location = new System.Drawing.Point(30, 80);
-            this.labelDescFissure.MaximumSize = new System.Drawing.Size(500, 0);
+            this.labelDescFissure.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelDescFissure.Name = "labelDescFissure";
             this.labelDescFissure.Size = new System.Drawing.Size(62, 15);
             this.labelDescFissure.TabIndex = 2;
@@ -389,9 +393,9 @@
             this.labelFissure.AutoSize = true;
             this.labelFissure.Location = new System.Drawing.Point(30, 20);
             this.labelFissure.Name = "labelFissure";
-            this.labelFissure.Size = new System.Drawing.Size(121, 15);
+            this.labelFissure.Size = new System.Drawing.Size(97, 15);
             this.labelFissure.TabIndex = 1;
-            this.labelFissure.Text = "Введите тип трещин:";
+            this.labelFissure.Text = "Введите данные:";
             // 
             // comboBoxFissure
             // 
@@ -412,7 +416,7 @@
             this.wizardPageResistanceEnamel.Controls.Add(this.labelDescResistanceEnamel);
             this.wizardPageResistanceEnamel.Controls.Add(this.labelResistanceEnamel);
             this.wizardPageResistanceEnamel.Name = "wizardPageResistanceEnamel";
-            this.wizardPageResistanceEnamel.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageResistanceEnamel.Size = new System.Drawing.Size(671, 481);
             this.wizardPageResistanceEnamel.TabIndex = 3;
             this.wizardPageResistanceEnamel.Text = "Уровень резистентности эмали";
             this.wizardPageResistanceEnamel.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageResistanceEnamel_Commit);
@@ -435,7 +439,7 @@
             // 
             this.labelDescResistanceEnamel.AutoSize = true;
             this.labelDescResistanceEnamel.Location = new System.Drawing.Point(30, 80);
-            this.labelDescResistanceEnamel.MaximumSize = new System.Drawing.Size(500, 0);
+            this.labelDescResistanceEnamel.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelDescResistanceEnamel.Name = "labelDescResistanceEnamel";
             this.labelDescResistanceEnamel.Size = new System.Drawing.Size(62, 15);
             this.labelDescResistanceEnamel.TabIndex = 2;
@@ -446,9 +450,9 @@
             this.labelResistanceEnamel.AutoSize = true;
             this.labelResistanceEnamel.Location = new System.Drawing.Point(30, 20);
             this.labelResistanceEnamel.Name = "labelResistanceEnamel";
-            this.labelResistanceEnamel.Size = new System.Drawing.Size(228, 15);
+            this.labelResistanceEnamel.Size = new System.Drawing.Size(97, 15);
             this.labelResistanceEnamel.TabIndex = 0;
-            this.labelResistanceEnamel.Text = "Введите уровень резистентности эмали:";
+            this.labelResistanceEnamel.Text = "Введите данные:";
             // 
             // wizardPageToothCrownDestruction
             // 
@@ -456,7 +460,7 @@
             this.wizardPageToothCrownDestruction.Controls.Add(this.comboBoxToothCrownDestruction);
             this.wizardPageToothCrownDestruction.Controls.Add(this.labelToothCrownDestruction);
             this.wizardPageToothCrownDestruction.Name = "wizardPageToothCrownDestruction";
-            this.wizardPageToothCrownDestruction.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageToothCrownDestruction.Size = new System.Drawing.Size(671, 481);
             this.wizardPageToothCrownDestruction.TabIndex = 4;
             this.wizardPageToothCrownDestruction.Text = "Индекс разрушения коронки зуба";
             this.wizardPageToothCrownDestruction.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageToothCrownDestruction_Commit);
@@ -466,7 +470,7 @@
             // 
             this.labelDescToothCrownDestruction.AutoSize = true;
             this.labelDescToothCrownDestruction.Location = new System.Drawing.Point(30, 80);
-            this.labelDescToothCrownDestruction.MaximumSize = new System.Drawing.Size(500, 0);
+            this.labelDescToothCrownDestruction.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelDescToothCrownDestruction.Name = "labelDescToothCrownDestruction";
             this.labelDescToothCrownDestruction.Size = new System.Drawing.Size(62, 15);
             this.labelDescToothCrownDestruction.TabIndex = 2;
@@ -490,20 +494,31 @@
             this.labelToothCrownDestruction.AutoSize = true;
             this.labelToothCrownDestruction.Location = new System.Drawing.Point(30, 20);
             this.labelToothCrownDestruction.Name = "labelToothCrownDestruction";
-            this.labelToothCrownDestruction.Size = new System.Drawing.Size(291, 15);
+            this.labelToothCrownDestruction.Size = new System.Drawing.Size(97, 15);
             this.labelToothCrownDestruction.TabIndex = 0;
-            this.labelToothCrownDestruction.Text = "Введите информацию о разрушении коронки зуба:";
+            this.labelToothCrownDestruction.Text = "Введите данные:";
             // 
             // wizardPageBite
             // 
+            this.wizardPageBite.Controls.Add(this.labelDescBite);
             this.wizardPageBite.Controls.Add(this.comboBoxBite);
             this.wizardPageBite.Controls.Add(this.labelBite);
             this.wizardPageBite.Name = "wizardPageBite";
-            this.wizardPageBite.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageBite.Size = new System.Drawing.Size(671, 481);
             this.wizardPageBite.TabIndex = 5;
             this.wizardPageBite.Text = "Прикус";
             this.wizardPageBite.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageBite_Commit);
             this.wizardPageBite.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPageBite_Initialize);
+            // 
+            // labelDescBite
+            // 
+            this.labelDescBite.AutoSize = true;
+            this.labelDescBite.Location = new System.Drawing.Point(30, 80);
+            this.labelDescBite.MaximumSize = new System.Drawing.Size(600, 0);
+            this.labelDescBite.Name = "labelDescBite";
+            this.labelDescBite.Size = new System.Drawing.Size(62, 15);
+            this.labelDescBite.TabIndex = 3;
+            this.labelDescBite.Text = "Описание";
             // 
             // comboBoxBite
             // 
@@ -523,29 +538,40 @@
             this.labelBite.AutoSize = true;
             this.labelBite.Location = new System.Drawing.Point(30, 20);
             this.labelBite.Name = "labelBite";
-            this.labelBite.Size = new System.Drawing.Size(106, 15);
+            this.labelBite.Size = new System.Drawing.Size(97, 15);
             this.labelBite.TabIndex = 0;
-            this.labelBite.Text = "Выберите прикус:";
+            this.labelBite.Text = "Введите данные:";
             // 
             // wizardPagePeriodontalDisease
             // 
+            this.wizardPagePeriodontalDisease.Controls.Add(this.labelDescPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Controls.Add(this.labelPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Controls.Add(this.comboBoxPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Name = "wizardPagePeriodontalDisease";
-            this.wizardPagePeriodontalDisease.Size = new System.Drawing.Size(557, 304);
+            this.wizardPagePeriodontalDisease.Size = new System.Drawing.Size(671, 481);
             this.wizardPagePeriodontalDisease.TabIndex = 6;
             this.wizardPagePeriodontalDisease.Text = "Наличие заболеваний пародонта (только хронический процесс)";
             this.wizardPagePeriodontalDisease.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPagePeriodontalDisease_Commit);
             this.wizardPagePeriodontalDisease.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPagePeriodontalDisease_Initialize);
+            // 
+            // labelDescPeriodontalDisease
+            // 
+            this.labelDescPeriodontalDisease.AutoSize = true;
+            this.labelDescPeriodontalDisease.Location = new System.Drawing.Point(30, 80);
+            this.labelDescPeriodontalDisease.MaximumSize = new System.Drawing.Size(600, 0);
+            this.labelDescPeriodontalDisease.Name = "labelDescPeriodontalDisease";
+            this.labelDescPeriodontalDisease.Size = new System.Drawing.Size(62, 15);
+            this.labelDescPeriodontalDisease.TabIndex = 4;
+            this.labelDescPeriodontalDisease.Text = "Описание";
             // 
             // labelPeriodontalDisease
             // 
             this.labelPeriodontalDisease.AutoSize = true;
             this.labelPeriodontalDisease.Location = new System.Drawing.Point(30, 20);
             this.labelPeriodontalDisease.Name = "labelPeriodontalDisease";
-            this.labelPeriodontalDisease.Size = new System.Drawing.Size(327, 15);
+            this.labelPeriodontalDisease.Size = new System.Drawing.Size(97, 15);
             this.labelPeriodontalDisease.TabIndex = 1;
-            this.labelPeriodontalDisease.Text = "Введите информацию о налачии заболеваний пародонта:";
+            this.labelPeriodontalDisease.Text = "Введите данные:";
             // 
             // comboBoxPeriodontalDisease
             // 
@@ -562,14 +588,25 @@
             // 
             // wizardPageBadHabits
             // 
+            this.wizardPageBadHabits.Controls.Add(this.labelDescBadHabits);
             this.wizardPageBadHabits.Controls.Add(this.comboBoxBadHabits);
             this.wizardPageBadHabits.Controls.Add(this.label1BadHabits);
             this.wizardPageBadHabits.Name = "wizardPageBadHabits";
-            this.wizardPageBadHabits.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageBadHabits.Size = new System.Drawing.Size(671, 481);
             this.wizardPageBadHabits.TabIndex = 7;
             this.wizardPageBadHabits.Text = "Вредные привычки";
             this.wizardPageBadHabits.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageBadHabits_Commit);
             this.wizardPageBadHabits.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPageBadHabits_Initialize);
+            // 
+            // labelDescBadHabits
+            // 
+            this.labelDescBadHabits.AutoSize = true;
+            this.labelDescBadHabits.Location = new System.Drawing.Point(30, 80);
+            this.labelDescBadHabits.MaximumSize = new System.Drawing.Size(600, 0);
+            this.labelDescBadHabits.Name = "labelDescBadHabits";
+            this.labelDescBadHabits.Size = new System.Drawing.Size(62, 15);
+            this.labelDescBadHabits.TabIndex = 5;
+            this.labelDescBadHabits.Text = "Описание";
             // 
             // comboBoxBadHabits
             // 
@@ -589,20 +626,31 @@
             this.label1BadHabits.AutoSize = true;
             this.label1BadHabits.Location = new System.Drawing.Point(30, 20);
             this.label1BadHabits.Name = "label1BadHabits";
-            this.label1BadHabits.Size = new System.Drawing.Size(254, 15);
+            this.label1BadHabits.Size = new System.Drawing.Size(97, 15);
             this.label1BadHabits.TabIndex = 0;
-            this.label1BadHabits.Text = "Введите информацию о вредных привычках:";
+            this.label1BadHabits.Text = "Введите данные:";
             // 
             // wizardPageProfessionalHarmfulness
             // 
+            this.wizardPageProfessionalHarmfulness.Controls.Add(this.labelDescProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Controls.Add(this.comboBoxProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Controls.Add(this.labelProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Name = "wizardPageProfessionalHarmfulness";
-            this.wizardPageProfessionalHarmfulness.Size = new System.Drawing.Size(557, 304);
+            this.wizardPageProfessionalHarmfulness.Size = new System.Drawing.Size(671, 481);
             this.wizardPageProfessionalHarmfulness.TabIndex = 8;
             this.wizardPageProfessionalHarmfulness.Text = "Профессиональные вредности";
             this.wizardPageProfessionalHarmfulness.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageProfessionalHarmfulness_Commit);
             this.wizardPageProfessionalHarmfulness.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPageProfessionalHarmfulness_Initialize);
+            // 
+            // labelDescProfessionalHarmfulness
+            // 
+            this.labelDescProfessionalHarmfulness.AutoSize = true;
+            this.labelDescProfessionalHarmfulness.Location = new System.Drawing.Point(30, 80);
+            this.labelDescProfessionalHarmfulness.MaximumSize = new System.Drawing.Size(600, 0);
+            this.labelDescProfessionalHarmfulness.Name = "labelDescProfessionalHarmfulness";
+            this.labelDescProfessionalHarmfulness.Size = new System.Drawing.Size(62, 15);
+            this.labelDescProfessionalHarmfulness.TabIndex = 5;
+            this.labelDescProfessionalHarmfulness.Text = "Описание";
             // 
             // comboBoxProfessionalHarmfulness
             // 
@@ -622,9 +670,9 @@
             this.labelProfessionalHarmfulness.AutoSize = true;
             this.labelProfessionalHarmfulness.Location = new System.Drawing.Point(30, 20);
             this.labelProfessionalHarmfulness.Name = "labelProfessionalHarmfulness";
-            this.labelProfessionalHarmfulness.Size = new System.Drawing.Size(309, 15);
+            this.labelProfessionalHarmfulness.Size = new System.Drawing.Size(97, 15);
             this.labelProfessionalHarmfulness.TabIndex = 1;
-            this.labelProfessionalHarmfulness.Text = "Введите инормацию о профессиональных вредностях:";
+            this.labelProfessionalHarmfulness.Text = "Введите данные:";
             // 
             // wizardPage10
             // 
@@ -632,7 +680,7 @@
             this.wizardPage10.Controls.Add(this.labelMethod);
             this.wizardPage10.Controls.Add(this.label14);
             this.wizardPage10.Name = "wizardPage10";
-            this.wizardPage10.Size = new System.Drawing.Size(557, 304);
+            this.wizardPage10.Size = new System.Drawing.Size(671, 422);
             this.wizardPage10.TabIndex = 10;
             this.wizardPage10.Text = "Метод лечения";
             this.wizardPage10.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage10_Commit);
@@ -671,7 +719,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 459);
+            this.ClientSize = new System.Drawing.Size(718, 682);
             this.Controls.Add(this.wizardControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestForm";
@@ -760,5 +808,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxHygieneIndex;
         private System.Windows.Forms.ComboBox comboBoxResistanceEnamel;
+        private System.Windows.Forms.Label labelDescBite;
+        private System.Windows.Forms.Label labelDescPeriodontalDisease;
+        private System.Windows.Forms.Label labelDescBadHabits;
+        private System.Windows.Forms.Label labelDescProfessionalHarmfulness;
     }
 }
