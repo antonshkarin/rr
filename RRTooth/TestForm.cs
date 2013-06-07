@@ -74,13 +74,13 @@ namespace RRTooth
             switch (comboBoxHygieneIndex.SelectedIndex)
             {
                 case 0:
-                    diagnosticCard.HygieneIndex = 0.5;
+                    diagnosticCard.HygieneIndex = HygieneIndexType.val0_12 ;
                     break;
                 case 1:
-                    diagnosticCard.HygieneIndex = 1.5;
+                    diagnosticCard.HygieneIndex = HygieneIndexType.val13_30;
                     break;
                 case 2:
-                    diagnosticCard.HygieneIndex = 3.5;
+                    diagnosticCard.HygieneIndex = HygieneIndexType.val31_60;
                     break;
             }
             /*
@@ -145,13 +145,13 @@ namespace RRTooth
             switch (comboBoxResistanceEnamel.SelectedIndex)
             {
                 case 0:
-                    diagnosticCard.ResistanceEnamelLevel = 15;
+                    diagnosticCard.ResistanceEnamelLevel = ResistanceEnamelLevelType.val10_40;
                     break;
                 case 1:
-                    diagnosticCard.ResistanceEnamelLevel = 35;
+                    diagnosticCard.ResistanceEnamelLevel = ResistanceEnamelLevelType.val41_60;
                     break;
                 case 2:
-                    diagnosticCard.ResistanceEnamelLevel = 75;
+                    diagnosticCard.ResistanceEnamelLevel = ResistanceEnamelLevelType.val60_100;
                     break;
             }
             /*try
