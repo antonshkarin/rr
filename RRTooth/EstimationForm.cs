@@ -12,10 +12,45 @@ namespace RRTooth
 {
     public partial class EstimationForm : Form
     {
+        private List<GroupBox> _estimates;
+
         public EstimationForm()
         {
             InitializeComponent();
+
+            _estimates = new List<GroupBox>();
+
+            foreach (Control c in tableLayoutPanel1.Controls)
+            {
+                if (c is GroupBox)
+                {
+                    _estimates.Add((GroupBox)c);
+                    foreach (Control r in c.Controls)
+                    {
+                        if (r is RadioButton)
+                        {
+                            ((RadioButton)r).CheckedChanged += estimation_Change;
+                        }
+                    }
+                }
+            }
+
+            showEstimation();
         }
+
+        void estimation_Change(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb != null)
+            {
+                if (rb.Checked)
+                {
+                    showEstimation();
+                }
+            }
+        }
+
+        //function 
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -79,6 +114,34 @@ namespace RRTooth
         {
             return Convert.ToInt32(
                 gb.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
+        }
+
+        private String reCalcEstimation()
+        {
+            const String estimationVeryGood = "Отличная реставрация (не требует повтороной реставрации)";
+            const String estimationGood = "Хорошая реставрация (требует корректировки, полировки, покрытия реминерализующими средствами)";
+            const String estimationNotGood = "Удовлетворительная реставрация (требует частично или полной замены)";
+            const String estimationBad = "Неудовлетворительная реставрация (полная замена реставрации)";
+
+            int totalEstimation = 0;
+            foreach (var gb in _estimates)
+            {
+                totalEstimation += Convert.ToInt32(gb.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
+            }
+
+            if (totalEstimation >= 80)
+                return estimationVeryGood;
+            else if (totalEstimation >= 60)
+                return estimationGood;
+            else if (totalEstimation > 40)
+                return estimationNotGood;
+            else
+                return estimationBad;
+        }
+
+        private void showEstimation()
+        {
+            labelEstimationResult.Text = reCalcEstimation();
         }
     }
 }
