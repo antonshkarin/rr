@@ -114,14 +114,17 @@ namespace RRTooth
 
         private void wizardPageBite_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
+            labelDescBite.Text = Properties.Resources.DescBite;
         }
 
         private void wizardPagePeriodontalDisease_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
+            labelDescPeriodontalDisease.Text = Properties.Resources.DescPeriodontalDisease;
         }
 
         private void wizardPageBadHabits_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
+            labelDescBadHabits.Text = Properties.Resources.DescBadHabits;
         }
 
         private void wizardPageFissure_Commit(object sender, AeroWizard.WizardPageConfirmEventArgs e)
@@ -295,7 +298,7 @@ namespace RRTooth
 
         private void wizardPageProfessionalHarmfulness_Initialize(object sender, AeroWizard.WizardPageInitEventArgs e)
         {
-            
+            labelDescProfessionalHarmfulness.Text = Properties.Resources.DescProfessionalHarmfulness;
         }
 
         private void labelToothColor_Click(object sender, EventArgs e)
