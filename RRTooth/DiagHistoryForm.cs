@@ -29,10 +29,23 @@ namespace RRTooth
             var estimation = serializer.Deserialize<DiagnosticCard>(history.info);
 
             {
+                string s = "";
+                switch (estimation.HygieneIndex)
+                {
+                    case HygieneIndexType.val0_12:
+                        s = "0-1,2";
+                        break;
+                    case HygieneIndexType.val13_30:
+                        s = "1,3-3,0";
+                        break;
+                    case HygieneIndexType.val31_60:
+                        s = "3,1-6,0";
+                        break;
+                }
                 DataGridViewRow r = new DataGridViewRow();
                 r.CreateCells(dataGridView1, new Object[] {
                               "Индекс гигиены",
-                              estimation.HygieneIndex });
+                              s });
                 dataGridView1.Rows.Add(r);
             }
 
@@ -102,10 +115,23 @@ namespace RRTooth
             }
 
             {
+                string s = "";
+                switch (estimation.ResistanceEnamelLevel)
+                {
+                    case ResistanceEnamelLevelType.val10_40:
+                        s = "10-40%";
+                        break;
+                    case ResistanceEnamelLevelType.val41_60:
+                        s = "41-60%";
+                        break;
+                    case ResistanceEnamelLevelType.val60_100:
+                        s = ">60%";
+                        break;
+                }
                 DataGridViewRow r = new DataGridViewRow();
                 r.CreateCells(dataGridView1, new Object[] {
                             "Уровень резистентности эмали",
-                             estimation.ResistanceEnamelLevel });
+                             s });
                 dataGridView1.Rows.Add(r);
             }
 
