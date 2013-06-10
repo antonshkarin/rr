@@ -45,6 +45,7 @@
             this.birthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Photo = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Action = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,12 +120,13 @@
             this.lastName,
             this.birthDate,
             this.type,
-            this.Photo});
+            this.Photo,
+            this.Action});
             this.dataGridView1.Location = new System.Drawing.Point(12, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(792, 292);
+            this.dataGridView1.Size = new System.Drawing.Size(886, 292);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -190,12 +192,21 @@
             this.Photo.Name = "Photo";
             this.Photo.ReadOnly = true;
             this.Photo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Photo.VisitedLinkColor = System.Drawing.Color.Blue;
+            // 
+            // Action
+            // 
+            this.Action.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Action.HeaderText = "Действие";
+            this.Action.Name = "Action";
+            this.Action.ReadOnly = true;
+            this.Action.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // HistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 417);
+            this.ClientSize = new System.Drawing.Size(910, 417);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelSecondName);
@@ -207,7 +218,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HistoryForm";
-            this.Text = "История";
+            this.Text = "МКСБ (вкладыш)";
             this.Load += new System.EventHandler(this.HistoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -233,5 +244,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn birthDate;
         private System.Windows.Forms.DataGridViewLinkColumn type;
         private System.Windows.Forms.DataGridViewLinkColumn Photo;
+        private System.Windows.Forms.DataGridViewLinkColumn Action;
     }
 }

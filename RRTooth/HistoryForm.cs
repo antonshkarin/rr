@@ -44,7 +44,8 @@ namespace RRTooth
                             historyRow.second_name,
                             historyRow.birthday.Value.ToShortDateString(),
                             historyRow.type == (Int64)rr_history.RowType.Diagnostics ? "Диагностика" : "Оценка",
-                            historyRow.photo == null ? "Добавить" : "Просмотр" });
+                            (historyRow.photo == null || historyRow.photo.Length == 0) ? "Добавить" : "Просмотр",
+                            "Удалить" });
                         r.Tag = historyRow;
                         dataGridView1.Rows.Add(r);
                     }
@@ -82,13 +83,14 @@ namespace RRTooth
             else if (e.ColumnIndex == this.dataGridView1.Columns["Photo"].Index)
             {
                 var entry = this.dataGridView1.Rows[e.RowIndex].Tag as rr_history;
-                if (entry.photo != null)
+                if (entry.photo != null && entry.photo.Length > 0)
                 {
                     // Просмотр
                     
                     MemoryStream ms = new MemoryStream(entry.photo);
                     Image image = Image.FromStream(ms);
                     Form form = new Form();
+                    form.Text = "Просмотр фотографии";
 
                     PictureBox pictureBox = new PictureBox();
                     pictureBox.Dock = DockStyle.Fill;
@@ -106,7 +108,7 @@ namespace RRTooth
                     openFileDialog.Multiselect = false;
                     openFileDialog.Filter = "Фото (*.jpg; *.jpeg; *.png; *.gif;) | *.jpg; *.jpeg; *.png; *.gif";
 
-                    if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         try
                         {
@@ -115,7 +117,7 @@ namespace RRTooth
 
                             RrDb db = new RrDb();
                             db.Edit(entry);
-                            this.dataGridView1.Rows[e.RowIndex].Cells["Photo"].Value = "Просмотр";
+                            dataGridView1.Rows[e.RowIndex].Cells["Photo"].Value = "Просмотр";
 
                             MessageBox.Show("Данные успешно сохранены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -123,6 +125,24 @@ namespace RRTooth
                         {
                             MessageBox.Show("Не удалось сохранить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                    }
+                }
+            }
+            else if (e.ColumnIndex == dataGridView1.Columns["Action"].Index)
+            {
+                if (MessageBox.Show("Удалить данные?", "Подтверждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    try
+                    {
+                        var entry = dataGridView1.Rows[e.RowIndex].Tag as rr_history;
+                        RrDb db = new RrDb();
+                        db.Delete(entry);
+                        MessageBox.Show("Данные удалены", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Не удалось удалить данные: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

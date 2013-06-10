@@ -28,7 +28,6 @@ namespace RRTooth
         public Form1()
         {
             InitializeComponent();
-            this.MouseDoubleClick += Form1_DoubleClick;
             this.MaximumSize = this.MinimumSize = this.Size;
         }
 
@@ -57,15 +56,15 @@ namespace RRTooth
             wizardForm.ShowDialog();
         }
 
+        private void closeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form wizardForm = new EstimationForm();
             wizardForm.ShowDialog();
-        }
-
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-
         }
 
         private void pictureBox1_MouseDown(object sender, EventArgs e)
@@ -86,30 +85,34 @@ namespace RRTooth
             historyForm.ShowDialog();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_DoubleClick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void closeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Form methodForm = new MethodForm();
             methodForm.ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form historyForm = new HistoryForm();
+            historyForm.ShowDialog();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form wizardForm = new TestForm();
+            wizardForm.ShowDialog();
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form methodForm = new MethodForm();
+            methodForm.ShowDialog();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form estimationForm = new EstimationForm();
+            estimationForm.ShowDialog();
         }
     }
 }

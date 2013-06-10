@@ -15,7 +15,7 @@ namespace RREntities
         {
             String connStr = String.Format(
                 "metadata=res://*/RrHistory.csdl|res://*/RrHistory.ssdl|res://*/RrHistory.msl;provider=System.Data.SQLite;provider connection string='{0}'",
-                ConfigurationManager.ConnectionStrings["rr_dbEntities"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["rr_dbEntities1"].ConnectionString);
             return connStr;
         }
 
@@ -261,6 +261,12 @@ namespace RREntities
         {
             var entryToUpd = dbContext.rr_history.First(e => e.id == entry.id);
             entryToUpd = entry;
+            dbContext.SaveChanges();
+        }
+
+        public void Delete(rr_history entry)
+        {
+            dbContext.rr_history.DeleteObject(entry);
             dbContext.SaveChanges();
         }
 

@@ -130,7 +130,7 @@
             // 
             this.wizardPage1.Controls.Add(this.groupBox2);
             this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(671, 422);
+            this.wizardPage1.Size = new System.Drawing.Size(671, 527);
             this.wizardPage1.TabIndex = 11;
             this.wizardPage1.Text = "Данные о пациенте";
             this.wizardPage1.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage1_Commit);
@@ -305,7 +305,7 @@
             this.wizardPageToothColor.Controls.Add(this.labelDescToothColor);
             this.wizardPageToothColor.Controls.Add(this.labelToothColorVisual);
             this.wizardPageToothColor.Name = "wizardPageToothColor";
-            this.wizardPageToothColor.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageToothColor.Size = new System.Drawing.Size(671, 527);
             this.wizardPageToothColor.TabIndex = 1;
             this.wizardPageToothColor.Text = "Цвет зуба";
             this.wizardPageToothColor.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageToothColor_Commit);
@@ -372,7 +372,7 @@
             this.wizardPageFissure.Controls.Add(this.labelFissure);
             this.wizardPageFissure.Controls.Add(this.comboBoxFissure);
             this.wizardPageFissure.Name = "wizardPageFissure";
-            this.wizardPageFissure.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageFissure.Size = new System.Drawing.Size(671, 527);
             this.wizardPageFissure.TabIndex = 9;
             this.wizardPageFissure.Text = "Наличие трещин";
             this.wizardPageFissure.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageFissure_Commit);
@@ -416,7 +416,7 @@
             this.wizardPageResistanceEnamel.Controls.Add(this.labelDescResistanceEnamel);
             this.wizardPageResistanceEnamel.Controls.Add(this.labelResistanceEnamel);
             this.wizardPageResistanceEnamel.Name = "wizardPageResistanceEnamel";
-            this.wizardPageResistanceEnamel.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageResistanceEnamel.Size = new System.Drawing.Size(671, 527);
             this.wizardPageResistanceEnamel.TabIndex = 3;
             this.wizardPageResistanceEnamel.Text = "Уровень резистентности эмали";
             this.wizardPageResistanceEnamel.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageResistanceEnamel_Commit);
@@ -460,7 +460,7 @@
             this.wizardPageToothCrownDestruction.Controls.Add(this.comboBoxToothCrownDestruction);
             this.wizardPageToothCrownDestruction.Controls.Add(this.labelToothCrownDestruction);
             this.wizardPageToothCrownDestruction.Name = "wizardPageToothCrownDestruction";
-            this.wizardPageToothCrownDestruction.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageToothCrownDestruction.Size = new System.Drawing.Size(671, 527);
             this.wizardPageToothCrownDestruction.TabIndex = 4;
             this.wizardPageToothCrownDestruction.Text = "Индекс разрушения коронки зуба";
             this.wizardPageToothCrownDestruction.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageToothCrownDestruction_Commit);
@@ -504,7 +504,7 @@
             this.wizardPageBite.Controls.Add(this.comboBoxBite);
             this.wizardPageBite.Controls.Add(this.labelBite);
             this.wizardPageBite.Name = "wizardPageBite";
-            this.wizardPageBite.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageBite.Size = new System.Drawing.Size(671, 527);
             this.wizardPageBite.TabIndex = 5;
             this.wizardPageBite.Text = "Прикус";
             this.wizardPageBite.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageBite_Commit);
@@ -548,7 +548,7 @@
             this.wizardPagePeriodontalDisease.Controls.Add(this.labelPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Controls.Add(this.comboBoxPeriodontalDisease);
             this.wizardPagePeriodontalDisease.Name = "wizardPagePeriodontalDisease";
-            this.wizardPagePeriodontalDisease.Size = new System.Drawing.Size(671, 481);
+            this.wizardPagePeriodontalDisease.Size = new System.Drawing.Size(671, 527);
             this.wizardPagePeriodontalDisease.TabIndex = 6;
             this.wizardPagePeriodontalDisease.Text = "Наличие заболеваний пародонта (только хронический процесс)";
             this.wizardPagePeriodontalDisease.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPagePeriodontalDisease_Commit);
@@ -592,7 +592,7 @@
             this.wizardPageBadHabits.Controls.Add(this.comboBoxBadHabits);
             this.wizardPageBadHabits.Controls.Add(this.label1BadHabits);
             this.wizardPageBadHabits.Name = "wizardPageBadHabits";
-            this.wizardPageBadHabits.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageBadHabits.Size = new System.Drawing.Size(671, 527);
             this.wizardPageBadHabits.TabIndex = 7;
             this.wizardPageBadHabits.Text = "Вредные привычки";
             this.wizardPageBadHabits.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageBadHabits_Commit);
@@ -636,7 +636,7 @@
             this.wizardPageProfessionalHarmfulness.Controls.Add(this.comboBoxProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Controls.Add(this.labelProfessionalHarmfulness);
             this.wizardPageProfessionalHarmfulness.Name = "wizardPageProfessionalHarmfulness";
-            this.wizardPageProfessionalHarmfulness.Size = new System.Drawing.Size(671, 481);
+            this.wizardPageProfessionalHarmfulness.Size = new System.Drawing.Size(671, 527);
             this.wizardPageProfessionalHarmfulness.TabIndex = 8;
             this.wizardPageProfessionalHarmfulness.Text = "Профессиональные вредности";
             this.wizardPageProfessionalHarmfulness.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPageProfessionalHarmfulness_Commit);
@@ -680,7 +680,7 @@
             this.wizardPage10.Controls.Add(this.labelMethod);
             this.wizardPage10.Controls.Add(this.label14);
             this.wizardPage10.Name = "wizardPage10";
-            this.wizardPage10.Size = new System.Drawing.Size(671, 422);
+            this.wizardPage10.Size = new System.Drawing.Size(671, 527);
             this.wizardPage10.TabIndex = 10;
             this.wizardPage10.Text = "Метод лечения";
             this.wizardPage10.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage10_Commit);
@@ -691,7 +691,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(27, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 198);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
